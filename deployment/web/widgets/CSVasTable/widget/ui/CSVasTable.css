@@ -1,0 +1,15 @@
+table.csv {
+	
+}
+
+table.csv tr {
+	padding-top: 4px;
+}
+
+table.csv td {
+    padding-right: 6px;
+}
+
+table.csv th {
+    padding-right: 6px;
+}

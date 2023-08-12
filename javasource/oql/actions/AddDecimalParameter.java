@@ -15,14 +15,18 @@ import oql.implementation.OQL;
 
 public class AddDecimalParameter extends CustomJavaAction<java.lang.Boolean>
 {
-	private java.lang.String name;
-	private java.math.BigDecimal value;
+	private final java.lang.String name;
+	private final java.math.BigDecimal value;
 
-	public AddDecimalParameter(IContext context, java.lang.String name, java.math.BigDecimal value)
+	public AddDecimalParameter(
+		IContext context,
+		java.lang.String _name,
+		java.math.BigDecimal _value
+	)
 	{
 		super(context);
-		this.name = name;
-		this.value = value;
+		this.name = _name;
+		this.value = _value;
 	}
 
 	@java.lang.Override

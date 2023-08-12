@@ -14,18 +14,21 @@ import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
 
 /**
- * Causes this request to sleep for a while. Useful to prevent brute force attacks or to simulate latency delays. 
- *  
+ * Causes this request to sleep for a while. Useful to prevent brute force attacks or to simulate latency delays. 
+ *  
  * Delaytime : time in ms
  */
 public class Delay extends CustomJavaAction<java.lang.Boolean>
 {
-	private java.lang.Long delaytime;
+	private final java.lang.Long delaytime;
 
-	public Delay(IContext context, java.lang.Long delaytime)
+	public Delay(
+		IContext context,
+		java.lang.Long _delaytime
+	)
 	{
 		super(context);
-		this.delaytime = delaytime;
+		this.delaytime = _delaytime;
 	}
 
 	@java.lang.Override

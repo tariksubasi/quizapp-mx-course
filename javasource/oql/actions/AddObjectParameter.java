@@ -16,14 +16,18 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class AddObjectParameter extends CustomJavaAction<java.lang.Boolean>
 {
-	private java.lang.String name;
-	private IMendixObject value;
+	private final java.lang.String name;
+	private final IMendixObject value;
 
-	public AddObjectParameter(IContext context, java.lang.String name, IMendixObject value)
+	public AddObjectParameter(
+		IContext context,
+		java.lang.String _name,
+		IMendixObject _value
+	)
 	{
 		super(context);
-		this.name = name;
-		this.value = value;
+		this.name = _name;
+		this.value = _value;
 	}
 
 	@java.lang.Override

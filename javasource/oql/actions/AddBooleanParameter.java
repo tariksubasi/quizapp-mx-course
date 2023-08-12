@@ -15,14 +15,18 @@ import oql.implementation.OQL;
 
 public class AddBooleanParameter extends CustomJavaAction<java.lang.Boolean>
 {
-	private java.lang.String name;
-	private java.lang.Boolean value;
+	private final java.lang.String name;
+	private final java.lang.Boolean value;
 
-	public AddBooleanParameter(IContext context, java.lang.String name, java.lang.Boolean value)
+	public AddBooleanParameter(
+		IContext context,
+		java.lang.String _name,
+		java.lang.Boolean _value
+	)
 	{
 		super(context);
-		this.name = name;
-		this.value = value;
+		this.name = _name;
+		this.value = _value;
 	}
 
 	@java.lang.Override
