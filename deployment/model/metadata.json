@@ -13,11 +13,15 @@
       "Name": "Administrator",
       "ManageableRoles": [
         "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
-        "53f5d6fa-6da9-4a71-b011-454ec052cce8"
+        "53f5d6fa-6da9-4a71-b011-454ec052cce8",
+        "365be5fd-6251-44a8-8a0a-f22142f3cacb"
       ]
     },
     "53f5d6fa-6da9-4a71-b011-454ec052cce8": {
       "Name": "User"
+    },
+    "365be5fd-6251-44a8-8a0a-f22142f3cacb": {
+      "Name": "Anonymous"
     }
   },
   "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
