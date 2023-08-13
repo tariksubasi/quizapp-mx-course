@@ -35,6 +35,16 @@ public final class Microflows
 	{
 		aCT_CreateMotorCycleBuilder().execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_ShowTaxAmountBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.ACT_ShowTaxAmount");
+		return builder;
+	}
+
+	public static void aCT_ShowTaxAmount(IContext context)
+	{
+		aCT_ShowTaxAmountBuilder().execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Test_BCOEventBuilder()
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.ACT_Test_BCOEvent");
@@ -94,5 +104,24 @@ public final class Microflows
 			)
 			.execute(context);
 		return (boolean) result;
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder calculateTaxAmountBuilder(
+		quizapp.proxies.RemoteObject _remoteObject
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.CalculateTaxAmount");
+		builder = builder.withParam("RemoteObject", _remoteObject);
+		return builder;
+	}
+
+	public static void calculateTaxAmount(
+		IContext context,
+		quizapp.proxies.RemoteObject _remoteObject
+	)
+	{
+		calculateTaxAmountBuilder(
+				_remoteObject
+			)
+			.execute(context);
 	}
 }
