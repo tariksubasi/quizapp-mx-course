@@ -15,6 +15,26 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the QuizApp module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_CreateCarBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.ACT_CreateCar");
+		return builder;
+	}
+
+	public static void aCT_CreateCar(IContext context)
+	{
+		aCT_CreateCarBuilder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_CreateMotorCycleBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.ACT_CreateMotorCycle");
+		return builder;
+	}
+
+	public static void aCT_CreateMotorCycle(IContext context)
+	{
+		aCT_CreateMotorCycleBuilder().execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Test_BCOEventBuilder()
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.ACT_Test_BCOEvent");
@@ -24,6 +44,36 @@ public final class Microflows
 	public static void aCT_Test_BCOEvent(IContext context)
 	{
 		aCT_Test_BCOEventBuilder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Test_BCOEvent_UpdateBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.ACT_Test_BCOEvent_Update");
+		return builder;
+	}
+
+	public static void aCT_Test_BCOEvent_Update(IContext context)
+	{
+		aCT_Test_BCOEvent_UpdateBuilder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder bCO_CarBuilder(
+		quizapp.proxies.Car _car
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.BCO_Car");
+		builder = builder.withParam("Car", _car);
+		return builder;
+	}
+
+	public static boolean bCO_Car(
+		IContext context,
+		quizapp.proxies.Car _car
+	)
+	{
+		Object result = bCO_CarBuilder(
+				_car
+			)
+			.execute(context);
+		return (boolean) result;
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder bCO_RemoteObjectBuilder(
 		quizapp.proxies.RemoteObject _remoteObject

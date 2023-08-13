@@ -69,6 +69,12 @@ public class RemoteObject implements com.mendix.systemwideinterfaces.core.IEntit
 	 */
 	public static quizapp.proxies.RemoteObject initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
+		if (com.mendix.core.Core.isSubClassOf("QuizApp.Car", mendixObject.getType())) {
+			return quizapp.proxies.Car.initialize(context, mendixObject);
+		}
+		if (com.mendix.core.Core.isSubClassOf("QuizApp.MotorCycle", mendixObject.getType())) {
+			return quizapp.proxies.MotorCycle.initialize(context, mendixObject);
+		}
 		return new quizapp.proxies.RemoteObject(context, mendixObject);
 	}
 
@@ -78,7 +84,7 @@ public class RemoteObject implements com.mendix.systemwideinterfaces.core.IEntit
 		return quizapp.proxies.RemoteObject.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<quizapp.proxies.RemoteObject> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
+	public static java.util.List<? extends quizapp.proxies.RemoteObject> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
 		return com.mendix.core.Core.createXPathQuery(String.format("//%1$s%2$s", entityName, xpathConstraint))
 			.execute(context)
