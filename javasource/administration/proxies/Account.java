@@ -16,6 +16,7 @@ public class Account extends system.proxies.User
 	 */
 	public enum MemberNames
 	{
+		_Id("_Id"),
 		FullName("FullName"),
 		Email("Email"),
 		IsLocalUser("IsLocalUser"),
@@ -84,6 +85,42 @@ public class Account extends system.proxies.User
 			.stream()
 			.map(obj -> administration.proxies.Account.initialize(context, obj))
 			.collect(java.util.stream.Collectors.toList());
+	}
+
+	/**
+	 * @return value of _Id
+	 */
+	public final java.lang.String get_Id()
+	{
+		return get_Id(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of _Id
+	 */
+	public final java.lang.String get_Id(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames._Id.toString());
+	}
+
+	/**
+	 * Set value of _Id
+	 * @param _id
+	 */
+	public final void set_Id(java.lang.String _id)
+	{
+		set_Id(getContext(), _id);
+	}
+
+	/**
+	 * Set value of _Id
+	 * @param context
+	 * @param _id
+	 */
+	public final void set_Id(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String _id)
+	{
+		getMendixObject().setValue(context, MemberNames._Id.toString(), _id);
 	}
 
 	/**

@@ -16,6 +16,26 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the Administration module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder bCO_AccountBuilder(
+		administration.proxies.Account _account
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Administration.BCO_Account");
+		builder = builder.withParam("Account", _account);
+		return builder;
+	}
+
+	public static boolean bCO_Account(
+		IContext context,
+		administration.proxies.Account _account
+	)
+	{
+		Object result = bCO_AccountBuilder(
+				_account
+			)
+			.execute(context);
+		return (boolean) result;
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder changeMyPasswordBuilder(
 		administration.proxies.AccountPasswordData _accountPasswordData
 	)
