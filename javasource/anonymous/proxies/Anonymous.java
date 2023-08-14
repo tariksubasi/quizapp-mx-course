@@ -20,6 +20,11 @@ public class Anonymous implements com.mendix.systemwideinterfaces.core.IEntityPr
 	 */
 	public enum MemberNames
 	{
+		Name("Name"),
+		Password("Password"),
+		ConfirmPassword("ConfirmPassword"),
+		Mail("Mail"),
+		FullName("FullName"),
 		IsLogin("IsLogin");
 
 		private final java.lang.String metaName;
@@ -70,6 +75,186 @@ public class Anonymous implements com.mendix.systemwideinterfaces.core.IEntityPr
 	{
 		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
 		return anonymous.proxies.Anonymous.initialize(context, mendixObject);
+	}
+
+	/**
+	 * @return value of Name
+	 */
+	public final java.lang.String getName()
+	{
+		return getName(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Name
+	 */
+	public final java.lang.String getName(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Name.toString());
+	}
+
+	/**
+	 * Set value of Name
+	 * @param name
+	 */
+	public final void setName(java.lang.String name)
+	{
+		setName(getContext(), name);
+	}
+
+	/**
+	 * Set value of Name
+	 * @param context
+	 * @param name
+	 */
+	public final void setName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String name)
+	{
+		getMendixObject().setValue(context, MemberNames.Name.toString(), name);
+	}
+
+	/**
+	 * @return value of Password
+	 */
+	public final java.lang.String getPassword()
+	{
+		return getPassword(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Password
+	 */
+	public final java.lang.String getPassword(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Password.toString());
+	}
+
+	/**
+	 * Set value of Password
+	 * @param password
+	 */
+	public final void setPassword(java.lang.String password)
+	{
+		setPassword(getContext(), password);
+	}
+
+	/**
+	 * Set value of Password
+	 * @param context
+	 * @param password
+	 */
+	public final void setPassword(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String password)
+	{
+		getMendixObject().setValue(context, MemberNames.Password.toString(), password);
+	}
+
+	/**
+	 * @return value of ConfirmPassword
+	 */
+	public final java.lang.String getConfirmPassword()
+	{
+		return getConfirmPassword(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ConfirmPassword
+	 */
+	public final java.lang.String getConfirmPassword(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.ConfirmPassword.toString());
+	}
+
+	/**
+	 * Set value of ConfirmPassword
+	 * @param confirmpassword
+	 */
+	public final void setConfirmPassword(java.lang.String confirmpassword)
+	{
+		setConfirmPassword(getContext(), confirmpassword);
+	}
+
+	/**
+	 * Set value of ConfirmPassword
+	 * @param context
+	 * @param confirmpassword
+	 */
+	public final void setConfirmPassword(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String confirmpassword)
+	{
+		getMendixObject().setValue(context, MemberNames.ConfirmPassword.toString(), confirmpassword);
+	}
+
+	/**
+	 * @return value of Mail
+	 */
+	public final java.lang.String getMail()
+	{
+		return getMail(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Mail
+	 */
+	public final java.lang.String getMail(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Mail.toString());
+	}
+
+	/**
+	 * Set value of Mail
+	 * @param mail
+	 */
+	public final void setMail(java.lang.String mail)
+	{
+		setMail(getContext(), mail);
+	}
+
+	/**
+	 * Set value of Mail
+	 * @param context
+	 * @param mail
+	 */
+	public final void setMail(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String mail)
+	{
+		getMendixObject().setValue(context, MemberNames.Mail.toString(), mail);
+	}
+
+	/**
+	 * @return value of FullName
+	 */
+	public final java.lang.String getFullName()
+	{
+		return getFullName(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of FullName
+	 */
+	public final java.lang.String getFullName(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.FullName.toString());
+	}
+
+	/**
+	 * Set value of FullName
+	 * @param fullname
+	 */
+	public final void setFullName(java.lang.String fullname)
+	{
+		setFullName(getContext(), fullname);
+	}
+
+	/**
+	 * Set value of FullName
+	 * @param context
+	 * @param fullname
+	 */
+	public final void setFullName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String fullname)
+	{
+		getMendixObject().setValue(context, MemberNames.FullName.toString(), fullname);
 	}
 
 	/**

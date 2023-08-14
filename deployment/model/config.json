@@ -10,6 +10,7 @@
     "ScheduledEventExecution": "None"
   },
   "Constants": {
+    "Anonymous.Regex_Mail": "\\w+((-|\\+|\\.)\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,})+",
     "CommunityCommons.MergeMultiplePdfs_MaxAtOnce": "10",
     "NanoflowCommons.Nanoflow_Commons_Version": "4.0.0"
   },
