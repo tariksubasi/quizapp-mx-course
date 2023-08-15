@@ -1,12 +1,14 @@
 Initialized native services in: C:\Users\TKA\.gradle\native
 Initialized jansi services in: C:\Users\TKA\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot': {JAVA_HOME=C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot, JAVA_VERSION=11.0.3, JAVA_VENDOR=AdoptOpenJDK, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=11.0.3+7, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=11.0.3+7, VM_VENDOR=AdoptOpenJDK, OS_ARCH=amd64}
-The client will now receive all logging from the daemon (pid: 18392). The daemon log file: C:\Users\TKA\.gradle\daemon\7.6\daemon-18392.out.log
-Starting 15th build in daemon [uptime: 2 hrs 41 mins 0.99 secs, performance: 99%, non-heap usage: 25% of 256 MiB]
+The client will now receive all logging from the daemon (pid: 17316). The daemon log file: C:\Users\TKA\.gradle\daemon\7.6\daemon-17316.out.log
+Starting 15th build in daemon [uptime: 1 hrs 19 mins 14.449 secs, performance: 99%, non-heap usage: 26% of 256 MiB]
 Using 12 worker leases.
 Now considering [C:\Users\TKA\Documents\Mendix\QuizApp\deployment] as hierarchies to watch
 Watching the file system is configured to be enabled if available
 File system watching is active
+Invalidating in-memory cache of C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\fileHashes\resourceHashesCache.bin
 Starting Build
 Settings evaluated using settings file 'C:\Users\TKA\Documents\Mendix\QuizApp\deployment\settings.gradle'.
 Projects loaded. Root project using build file 'C:\Users\TKA\Documents\Mendix\QuizApp\deployment\build.gradle'.
@@ -23,7 +25,9 @@ Tasks to be executed: [task ':clean-excluded-jars', task ':copyDeploymentArtifac
 Tasks that were excluded: []
 Resolve mutations for :clean-excluded-jars (Thread[Execution worker,5,main]) started.
 :clean-excluded-jars (Thread[Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[Execution worker Thread 2,5,main]) started.
+destroyer locations for task group 0 (Thread[included builds,5,main]) started.
+Invalidating in-memory cache of C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\executionHistory\executionHistory.bin
+Invalidating in-memory cache of C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\buildOutputCleanup\outputFiles.bin
 
 > Task :clean-excluded-jars UP-TO-DATE
 Caching disabled for task ':clean-excluded-jars' because:
@@ -43,17 +47,26 @@ Watching 0 directory hierarchies to track changes
 Resolve mutations for :copyLibs (Thread[Execution worker,5,main]) started.
 :copyLibs (Thread[Execution worker,5,main]) started.
 
-> Task :copyLibs UP-TO-DATE
+> Task :copyLibs
 Watching 1 directory hierarchies to track changes
 Caching disabled for task ':copyLibs' because:
   Build cache is disabled
-Skipping task ':copyLibs' as it is up-to-date.
+Task ':copyLibs' is not up-to-date because:
+  Input property 'rootSpec$1$1' file C:\Users\TKA\Documents\Mendix\QuizApp\userlib\geoip2-4.0.1.jar has been added.
+  Input property 'rootSpec$1$1' file C:\Users\TKA\Documents\Mendix\QuizApp\userlib\maxmind-db-3.0.0.jar has been added.
+Not watching anything anymore
+Watching 0 directory hierarchies to track changes
+file or directory 'C:\Users\TKA\Documents\Mendix\QuizApp\vendorlib', not found
+Watching 1 directory hierarchies to track changes
 Resolve mutations for :copyResources (Thread[Execution worker,5,main]) started.
-:copyResources (Thread[Execution worker Thread 3,5,main]) started.
+:copyResources (Thread[Execution worker,5,main]) started.
 
-> Task :copyResources NO-SOURCE
-Skipping task ':copyResources' as it has no source files and no previous output files.
-Resolve mutations for :unzipDataSnapshot (Thread[Execution worker Thread 3,5,main]) started.
+> Task :copyResources
+Caching disabled for task ':copyResources' because:
+  Build cache is disabled
+Task ':copyResources' is not up-to-date because:
+  No history is available.
+Resolve mutations for :unzipDataSnapshot (Thread[Execution worker,5,main]) started.
 :unzipDataSnapshot (Thread[Execution worker Thread 3,5,main]) started.
 
 > Task :unzipDataSnapshot SKIPPED
@@ -64,8 +77,8 @@ Resolve mutations for :deploy (Thread[Execution worker Thread 3,5,main]) started
 > Task :deploy
 Skipping task ':deploy' as it has no actions.
 
-BUİLD SUCCESSFUL in 910ms
-3 actionable tasks: 1 executed, 2 up-to-date
+BUİLD SUCCESSFUL in 1s
+4 actionable tasks: 3 executed, 1 up-to-date
 Watched directory hierarchies: [C:\Users\TKA\Documents\Mendix\QuizApp\deployment]
 
 

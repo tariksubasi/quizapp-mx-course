@@ -98,6 +98,9 @@ public class UserActionsRegistrar
     registrator.registerUserAction(communitycommons.actions.TimeMeasureStart.class);
     registrator.registerUserAction(communitycommons.actions.XSSSanitize.class);
     registrator.registerUserAction(communitycommons.actions.YearsBetween.class);
+    registrator.registerUserAction(extensions.actions.JA_GetCityByIp.class);
+    registrator.registerUserAction(extensions.actions.JA_GetCountryByIp.class);
+    registrator.registerUserAction(extensions.actions.JA_GetIp.class);
     registrator.registerUserAction(oql.actions.AddBooleanParameter.class);
     registrator.registerUserAction(oql.actions.AddDateTimeParameter.class);
     registrator.registerUserAction(oql.actions.AddDecimalParameter.class);
