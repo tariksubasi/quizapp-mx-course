@@ -1,0 +1,3 @@
+2023-08-15 15:12:34.743 INFO - M2EE: Added admin request handler '/prometheus' with servlet class 'com.mendix.metrics.prometheus.PrometheusServlet'
+
+
