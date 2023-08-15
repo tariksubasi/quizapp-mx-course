@@ -29,6 +29,7 @@ public class Account extends system.proxies.User
 		FailedLogins("FailedLogins"),
 		WebServiceUser("WebServiceUser"),
 		IsAnonymous("IsAnonymous"),
+		Account_City("Administration.Account_City"),
 		UserRoles("System.UserRoles"),
 		User_Language("System.User_Language"),
 		User_TimeZone("System.User_TimeZone");
@@ -229,6 +230,53 @@ public class Account extends system.proxies.User
 	public final void setIsLocalUser(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean islocaluser)
 	{
 		getMendixObject().setValue(context, MemberNames.IsLocalUser.toString(), islocaluser);
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of Account_City
+	 */
+	public final extensions.proxies.City getAccount_City() throws com.mendix.core.CoreException
+	{
+		return getAccount_City(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Account_City
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final extensions.proxies.City getAccount_City(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		extensions.proxies.City result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Account_City.toString());
+		if (identifier != null) {
+			result = extensions.proxies.City.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of Account_City
+	 * @param account_city
+	 */
+	public final void setAccount_City(extensions.proxies.City account_city)
+	{
+		setAccount_City(getContext(), account_city);
+	}
+
+	/**
+	 * Set value of Account_City
+	 * @param context
+	 * @param account_city
+	 */
+	public final void setAccount_City(com.mendix.systemwideinterfaces.core.IContext context, extensions.proxies.City account_city)
+	{
+		if (account_city == null) {
+			getMendixObject().setValue(context, MemberNames.Account_City.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.Account_City.toString(), account_city.getMendixObject().getId());
+		}
 	}
 
 	@java.lang.Override

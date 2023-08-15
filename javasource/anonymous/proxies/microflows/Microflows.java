@@ -6,6 +6,7 @@ package anonymous.proxies.microflows;
 
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public final class Microflows
 {
@@ -15,6 +16,16 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the Anonymous module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Test_UserLocationBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Anonymous.ACT_Test_UserLocation");
+		return builder;
+	}
+
+	public static void aCT_Test_UserLocation(IContext context)
+	{
+		aCT_Test_UserLocationBuilder().execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_CreateAccountBuilder(
 		anonymous.proxies.Anonymous _anonymous
 	)
@@ -33,5 +44,49 @@ public final class Microflows
 				_anonymous
 			)
 			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_GetCityBuilder(
+		java.lang.String _ipAdress,
+		extensions.proxies.Country _country
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Anonymous.SUB_GetCity");
+		builder = builder.withParam("IpAdress", _ipAdress);
+		builder = builder.withParam("Country", _country);
+		return builder;
+	}
+
+	public static extensions.proxies.City sUB_GetCity(
+		IContext context,
+		java.lang.String _ipAdress,
+		extensions.proxies.Country _country
+	)
+	{
+		Object result = sUB_GetCityBuilder(
+				_ipAdress,
+				_country
+			)
+			.execute(context);
+		return result == null ? null : extensions.proxies.City.initialize(context, (IMendixObject) result);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_GetCountryBuilder(
+		java.lang.String _ipAdress
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Anonymous.SUB_GetCountry");
+		builder = builder.withParam("IpAdress", _ipAdress);
+		return builder;
+	}
+
+	public static extensions.proxies.Country sUB_GetCountry(
+		IContext context,
+		java.lang.String _ipAdress
+	)
+	{
+		Object result = sUB_GetCountryBuilder(
+				_ipAdress
+			)
+			.execute(context);
+		return result == null ? null : extensions.proxies.Country.initialize(context, (IMendixObject) result);
 	}
 }

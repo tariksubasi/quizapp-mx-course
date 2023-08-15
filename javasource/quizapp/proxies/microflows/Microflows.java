@@ -6,6 +6,7 @@ package quizapp.proxies.microflows;
 
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public final class Microflows
 {
@@ -123,5 +124,16 @@ public final class Microflows
 				_remoteObject
 			)
 			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_Account_ByCurrentUserBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.SUB_Account_ByCurrentUser");
+		return builder;
+	}
+
+	public static administration.proxies.Account sUB_Account_ByCurrentUser(IContext context)
+	{
+		Object result = sUB_Account_ByCurrentUserBuilder().execute(context);
+		return result == null ? null : administration.proxies.Account.initialize(context, (IMendixObject) result);
 	}
 }
