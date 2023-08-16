@@ -67,7 +67,7 @@
     },
     {
       "Name": "/p/",
-      "DefaultEnabled": false,
+      "DefaultEnabled": true,
       "MatchExactly": false
     }
   ]

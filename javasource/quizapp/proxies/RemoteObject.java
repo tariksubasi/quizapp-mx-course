@@ -72,8 +72,17 @@ public class RemoteObject implements com.mendix.systemwideinterfaces.core.IEntit
 		if (com.mendix.core.Core.isSubClassOf("QuizApp.Car", mendixObject.getType())) {
 			return quizapp.proxies.Car.initialize(context, mendixObject);
 		}
+		if (com.mendix.core.Core.isSubClassOf("Builder.Course", mendixObject.getType())) {
+			return builder.proxies.Course.initialize(context, mendixObject);
+		}
+		if (com.mendix.core.Core.isSubClassOf("Builder.Lecture", mendixObject.getType())) {
+			return builder.proxies.Lecture.initialize(context, mendixObject);
+		}
 		if (com.mendix.core.Core.isSubClassOf("QuizApp.MotorCycle", mendixObject.getType())) {
 			return quizapp.proxies.MotorCycle.initialize(context, mendixObject);
+		}
+		if (com.mendix.core.Core.isSubClassOf("Builder.School", mendixObject.getType())) {
+			return builder.proxies.School.initialize(context, mendixObject);
 		}
 		return new quizapp.proxies.RemoteObject(context, mendixObject);
 	}
