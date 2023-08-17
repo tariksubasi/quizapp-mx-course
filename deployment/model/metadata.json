@@ -14,7 +14,8 @@
       "ManageableRoles": [
         "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
         "53f5d6fa-6da9-4a71-b011-454ec052cce8",
-        "365be5fd-6251-44a8-8a0a-f22142f3cacb"
+        "365be5fd-6251-44a8-8a0a-f22142f3cacb",
+        "bc1fcfc8-9821-4f84-9826-e72d04f0dd23"
       ]
     },
     "53f5d6fa-6da9-4a71-b011-454ec052cce8": {
@@ -22,6 +23,9 @@
     },
     "365be5fd-6251-44a8-8a0a-f22142f3cacb": {
       "Name": "Anonymous"
+    },
+    "bc1fcfc8-9821-4f84-9826-e72d04f0dd23": {
+      "Name": "DataEmployee"
     }
   },
   "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
