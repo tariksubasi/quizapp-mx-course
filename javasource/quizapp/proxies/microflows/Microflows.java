@@ -6,7 +6,6 @@ package quizapp.proxies.microflows;
 
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public final class Microflows
 {
@@ -106,6 +105,26 @@ public final class Microflows
 			.execute(context);
 		return (boolean) result;
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder bDE_RemoteObjectBuilder(
+		quizapp.proxies.RemoteObject _remoteObject
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.BDE_RemoteObject");
+		builder = builder.withParam("RemoteObject", _remoteObject);
+		return builder;
+	}
+
+	public static boolean bDE_RemoteObject(
+		IContext context,
+		quizapp.proxies.RemoteObject _remoteObject
+	)
+	{
+		Object result = bDE_RemoteObjectBuilder(
+				_remoteObject
+			)
+			.execute(context);
+		return (boolean) result;
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder calculateTaxAmountBuilder(
 		quizapp.proxies.RemoteObject _remoteObject
 	)
@@ -125,15 +144,43 @@ public final class Microflows
 			)
 			.execute(context);
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_Account_ByCurrentUserBuilder()
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_Check_DE_IsOwnerOfObjectBuilder(
+		quizapp.proxies.RemoteObject _remoteObject
+	)
 	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.SUB_Account_ByCurrentUser");
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.SUB_Check_DE_IsOwnerOfObject");
+		builder = builder.withParam("RemoteObject", _remoteObject);
 		return builder;
 	}
 
-	public static administration.proxies.Account sUB_Account_ByCurrentUser(IContext context)
+	public static boolean sUB_Check_DE_IsOwnerOfObject(
+		IContext context,
+		quizapp.proxies.RemoteObject _remoteObject
+	)
 	{
-		Object result = sUB_Account_ByCurrentUserBuilder().execute(context);
-		return result == null ? null : administration.proxies.Account.initialize(context, (IMendixObject) result);
+		Object result = sUB_Check_DE_IsOwnerOfObjectBuilder(
+				_remoteObject
+			)
+			.execute(context);
+		return (boolean) result;
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_SetDefaultAttributesBuilder(
+		quizapp.proxies.RemoteObject _remoteObject
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.SUB_SetDefaultAttributes");
+		builder = builder.withParam("RemoteObject", _remoteObject);
+		return builder;
+	}
+
+	public static void sUB_SetDefaultAttributes(
+		IContext context,
+		quizapp.proxies.RemoteObject _remoteObject
+	)
+	{
+		sUB_SetDefaultAttributesBuilder(
+				_remoteObject
+			)
+			.execute(context);
 	}
 }
