@@ -6,6 +6,7 @@ package builder.proxies.microflows;
 
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public final class Microflows
 {
@@ -106,5 +107,16 @@ public final class Microflows
 				_course
 			)
 			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ConnectedSelectorBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_ConnectedSelector");
+		return builder;
+	}
+
+	public static builder.proxies.ConnectedSelector dS_ConnectedSelector(IContext context)
+	{
+		Object result = dS_ConnectedSelectorBuilder().execute(context);
+		return result == null ? null : builder.proxies.ConnectedSelector.initialize(context, (IMendixObject) result);
 	}
 }
