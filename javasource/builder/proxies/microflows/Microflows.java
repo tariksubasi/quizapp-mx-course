@@ -119,4 +119,63 @@ public final class Microflows
 		Object result = dS_ConnectedSelectorBuilder().execute(context);
 		return result == null ? null : builder.proxies.ConnectedSelector.initialize(context, (IMendixObject) result);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_SelectableCoursesBuilder(
+		builder.proxies.ConnectedSelector _connectedSelector
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_SelectableCourses");
+		builder = builder.withParam("ConnectedSelector", _connectedSelector);
+		return builder;
+	}
+
+	public static java.util.List<builder.proxies.Course> dS_SelectableCourses(
+		IContext context,
+		builder.proxies.ConnectedSelector _connectedSelector
+	)
+	{
+		Object result = dS_SelectableCoursesBuilder(
+				_connectedSelector
+			)
+			.execute(context);
+		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Course.initialize(context, obj));
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_SelectableLecturesBuilder(
+		builder.proxies.ConnectedSelector _connectedSelector
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_SelectableLectures");
+		builder = builder.withParam("ConnectedSelector", _connectedSelector);
+		return builder;
+	}
+
+	public static java.util.List<builder.proxies.Lecture> dS_SelectableLectures(
+		IContext context,
+		builder.proxies.ConnectedSelector _connectedSelector
+	)
+	{
+		Object result = dS_SelectableLecturesBuilder(
+				_connectedSelector
+			)
+			.execute(context);
+		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Lecture.initialize(context, obj));
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder oCH_RefreshSelectorBuilder(
+		builder.proxies.ConnectedSelector _connectedSelector
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.OCH_RefreshSelector");
+		builder = builder.withParam("ConnectedSelector", _connectedSelector);
+		return builder;
+	}
+
+	public static void oCH_RefreshSelector(
+		IContext context,
+		builder.proxies.ConnectedSelector _connectedSelector
+	)
+	{
+		oCH_RefreshSelectorBuilder(
+				_connectedSelector
+			)
+			.execute(context);
+	}
 }
