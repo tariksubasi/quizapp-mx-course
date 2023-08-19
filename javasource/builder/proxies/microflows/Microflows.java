@@ -108,6 +108,26 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ActiveQuestionBuilder(
+		builder.proxies.TestBuilderHelper _testBuilderHelper
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_ActiveQuestion");
+		builder = builder.withParam("TestBuilderHelper", _testBuilderHelper);
+		return builder;
+	}
+
+	public static builder.proxies.Question dS_ActiveQuestion(
+		IContext context,
+		builder.proxies.TestBuilderHelper _testBuilderHelper
+	)
+	{
+		Object result = dS_ActiveQuestionBuilder(
+				_testBuilderHelper
+			)
+			.execute(context);
+		return result == null ? null : builder.proxies.Question.initialize(context, (IMendixObject) result);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ConnectedSelectorBuilder()
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_ConnectedSelector");
@@ -158,5 +178,16 @@ public final class Microflows
 			)
 			.execute(context);
 		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Lecture.initialize(context, obj));
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_TestBuilderHelperBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_TestBuilderHelper");
+		return builder;
+	}
+
+	public static builder.proxies.TestBuilderHelper dS_TestBuilderHelper(IContext context)
+	{
+		Object result = dS_TestBuilderHelperBuilder().execute(context);
+		return result == null ? null : builder.proxies.TestBuilderHelper.initialize(context, (IMendixObject) result);
 	}
 }
