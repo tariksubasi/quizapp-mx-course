@@ -159,23 +159,4 @@ public final class Microflows
 			.execute(context);
 		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Lecture.initialize(context, obj));
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder oCH_RefreshSelectorBuilder(
-		builder.proxies.ConnectedSelector _connectedSelector
-	)
-	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.OCH_RefreshSelector");
-		builder = builder.withParam("ConnectedSelector", _connectedSelector);
-		return builder;
-	}
-
-	public static void oCH_RefreshSelector(
-		IContext context,
-		builder.proxies.ConnectedSelector _connectedSelector
-	)
-	{
-		oCH_RefreshSelectorBuilder(
-				_connectedSelector
-			)
-			.execute(context);
-	}
 }
