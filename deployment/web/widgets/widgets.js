@@ -1,1 +1,1 @@
-define(["CSVasTable/widget/CSVasTable"], {});
+define(["BootstrapRTE/widget/BootstrapRTE", "CSVasTable/widget/CSVasTable"], {});
