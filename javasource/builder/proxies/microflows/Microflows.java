@@ -108,6 +108,25 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_SaveTestBuilder(
+		builder.proxies.TestBuilderHelper _testBuilderHelper
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_SaveTest");
+		builder = builder.withParam("TestBuilderHelper", _testBuilderHelper);
+		return builder;
+	}
+
+	public static void aCT_SaveTest(
+		IContext context,
+		builder.proxies.TestBuilderHelper _testBuilderHelper
+	)
+	{
+		aCT_SaveTestBuilder(
+				_testBuilderHelper
+			)
+			.execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ActiveQuestionBuilder(
 		builder.proxies.TestBuilderHelper _testBuilderHelper
 	)
@@ -189,5 +208,44 @@ public final class Microflows
 	{
 		Object result = dS_TestBuilderHelperBuilder().execute(context);
 		return result == null ? null : builder.proxies.TestBuilderHelper.initialize(context, (IMendixObject) result);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_CreateTestBuilder(
+		builder.proxies.TestBuilderHelper _testBuilderHelper
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.SUB_CreateTest");
+		builder = builder.withParam("TestBuilderHelper", _testBuilderHelper);
+		return builder;
+	}
+
+	public static void sUB_CreateTest(
+		IContext context,
+		builder.proxies.TestBuilderHelper _testBuilderHelper
+	)
+	{
+		sUB_CreateTestBuilder(
+				_testBuilderHelper
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_ValidateTestBuilder(
+		builder.proxies.TestBuilderHelper _testBuilderHelper
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.SUB_ValidateTest");
+		builder = builder.withParam("TestBuilderHelper", _testBuilderHelper);
+		return builder;
+	}
+
+	public static boolean sUB_ValidateTest(
+		IContext context,
+		builder.proxies.TestBuilderHelper _testBuilderHelper
+	)
+	{
+		Object result = sUB_ValidateTestBuilder(
+				_testBuilderHelper
+			)
+			.execute(context);
+		return (boolean) result;
 	}
 }

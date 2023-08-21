@@ -1,0 +1,13 @@
+UPDATE "builder$question" SET "optionc" = SUBSTRING("optionc" FROM 1 FOR 200);
+ALTER TABLE "builder$question" ALTER COLUMN "optionc" SET DATA TYPE VARCHAR_IGNORECASE(200);
+UPDATE "builder$question" SET "optionb" = SUBSTRING("optionb" FROM 1 FOR 200);
+ALTER TABLE "builder$question" ALTER COLUMN "optionb" SET DATA TYPE VARCHAR_IGNORECASE(200);
+UPDATE "builder$question" SET "optiond" = SUBSTRING("optiond" FROM 1 FOR 200);
+ALTER TABLE "builder$question" ALTER COLUMN "optiond" SET DATA TYPE VARCHAR_IGNORECASE(200);
+UPDATE "builder$question" SET "optiona" = SUBSTRING("optiona" FROM 1 FOR 200);
+ALTER TABLE "builder$question" ALTER COLUMN "optiona" SET DATA TYPE VARCHAR_IGNORECASE(200);
+UPDATE "mendixsystem$attribute" SET "entity_id" = '387272c2-bf38-429e-84e2-4ffe48e43b5f', "attribute_name" = 'OptionA', "column_name" = 'optiona', "type" = 30, "length" = 200, "default_value" = '', "is_auto_number" = false WHERE "id" = '7f9fba12-00e6-473a-9a18-e9683083d0b4';
+UPDATE "mendixsystem$attribute" SET "entity_id" = '387272c2-bf38-429e-84e2-4ffe48e43b5f', "attribute_name" = 'OptionB', "column_name" = 'optionb', "type" = 30, "length" = 200, "default_value" = '', "is_auto_number" = false WHERE "id" = '1f0d9520-6c94-4e5c-99ee-866eefae7e5c';
+UPDATE "mendixsystem$attribute" SET "entity_id" = '387272c2-bf38-429e-84e2-4ffe48e43b5f', "attribute_name" = 'OptionC', "column_name" = 'optionc', "type" = 30, "length" = 200, "default_value" = '', "is_auto_number" = false WHERE "id" = 'd0d47863-5f20-4ad9-a7e2-2edc907dc727';
+UPDATE "mendixsystem$attribute" SET "entity_id" = '387272c2-bf38-429e-84e2-4ffe48e43b5f', "attribute_name" = 'OptionD', "column_name" = 'optiond', "type" = 30, "length" = 200, "default_value" = '', "is_auto_number" = false WHERE "id" = '229d4f9a-7d6c-4725-a4ed-cafd5bd21292';
+UPDATE "mendixsystem$version" SET "versionnumber" = '4.2', "lastsyncdate" = '20230821 16:40:59';
