@@ -127,15 +127,28 @@ public final class Microflows
 			)
 			.execute(context);
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_ShowTestBuilder_ToCreateBuilder()
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_UpdateQuestionBuilder(
+		builder.proxies.Test _test,
+		builder.proxies.Question _question
+	)
 	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_ShowTestBuilder_ToCreate");
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_UpdateQuestion");
+		builder = builder.withParam("Test", _test);
+		builder = builder.withParam("Question", _question);
 		return builder;
 	}
 
-	public static void aCT_ShowTestBuilder_ToCreate(IContext context)
+	public static void aCT_UpdateQuestion(
+		IContext context,
+		builder.proxies.Test _test,
+		builder.proxies.Question _question
+	)
 	{
-		aCT_ShowTestBuilder_ToCreateBuilder().execute(context);
+		aCT_UpdateQuestionBuilder(
+				_test,
+				_question
+			)
+			.execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_UpdateTestBuilder(
 		builder.proxies.Test _test
