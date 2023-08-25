@@ -62,6 +62,48 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_DeleteQuestionBuilder(
+		builder.proxies.Question _question,
+		builder.proxies.Test _test
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_DeleteQuestion");
+		builder = builder.withParam("Question", _question);
+		builder = builder.withParam("Test", _test);
+		return builder;
+	}
+
+	public static void aCT_DeleteQuestion(
+		IContext context,
+		builder.proxies.Question _question,
+		builder.proxies.Test _test
+	)
+	{
+		aCT_DeleteQuestionBuilder(
+				_question,
+				_test
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_DeleteTestBuilder(
+		builder.proxies.Test _test
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_DeleteTest");
+		builder = builder.withParam("Test", _test);
+		return builder;
+	}
+
+	public static void aCT_DeleteTest(
+		IContext context,
+		builder.proxies.Test _test
+	)
+	{
+		aCT_DeleteTestBuilder(
+				_test
+			)
+			.execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Lecture_DeleteBuilder(
 		builder.proxies.Lecture _lecture,
 		builder.proxies.Course _course
