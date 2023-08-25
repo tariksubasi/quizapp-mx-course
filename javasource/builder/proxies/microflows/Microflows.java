@@ -127,6 +127,35 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_ShowTestBuilder_ToCreateBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_ShowTestBuilder_ToCreate");
+		return builder;
+	}
+
+	public static void aCT_ShowTestBuilder_ToCreate(IContext context)
+	{
+		aCT_ShowTestBuilder_ToCreateBuilder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_UpdateTestBuilder(
+		builder.proxies.Test _test
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_UpdateTest");
+		builder = builder.withParam("Test", _test);
+		return builder;
+	}
+
+	public static void aCT_UpdateTest(
+		IContext context,
+		builder.proxies.Test _test
+	)
+	{
+		aCT_UpdateTestBuilder(
+				_test
+			)
+			.execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ActiveQuestionBuilder(
 		builder.proxies.TestBuilderHelper _testBuilderHelper
 	)
@@ -198,16 +227,25 @@ public final class Microflows
 			.execute(context);
 		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Lecture.initialize(context, obj));
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_TestBuilderHelperBuilder()
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_ConnectedSelector_BuildBuilder(
+		builder.proxies.Test _test
+	)
 	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_TestBuilderHelper");
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.SUB_ConnectedSelector_Build");
+		builder = builder.withParam("Test", _test);
 		return builder;
 	}
 
-	public static builder.proxies.TestBuilderHelper dS_TestBuilderHelper(IContext context)
+	public static builder.proxies.ConnectedSelector sUB_ConnectedSelector_Build(
+		IContext context,
+		builder.proxies.Test _test
+	)
 	{
-		Object result = dS_TestBuilderHelperBuilder().execute(context);
-		return result == null ? null : builder.proxies.TestBuilderHelper.initialize(context, (IMendixObject) result);
+		Object result = sUB_ConnectedSelector_BuildBuilder(
+				_test
+			)
+			.execute(context);
+		return result == null ? null : builder.proxies.ConnectedSelector.initialize(context, (IMendixObject) result);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_CreateTestBuilder(
 		builder.proxies.TestBuilderHelper _testBuilderHelper
