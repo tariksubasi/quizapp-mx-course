@@ -23,7 +23,8 @@ public class TestHelper implements com.mendix.systemwideinterfaces.core.IEntityP
 		ShowNextStep("ShowNextStep"),
 		ActiveQuestionSort("ActiveQuestionSort"),
 		TestHelper_Test("Builder.TestHelper_Test"),
-		TestHelper_ConnectedSelector("Builder.TestHelper_ConnectedSelector");
+		TestHelper_ConnectedSelector("Builder.TestHelper_ConnectedSelector"),
+		TestHelper_SolverTest("Builder.TestHelper_SolverTest");
 
 		private final java.lang.String metaName;
 
@@ -238,6 +239,53 @@ public class TestHelper implements com.mendix.systemwideinterfaces.core.IEntityP
 			getMendixObject().setValue(context, MemberNames.TestHelper_ConnectedSelector.toString(), null);
 		} else {
 			getMendixObject().setValue(context, MemberNames.TestHelper_ConnectedSelector.toString(), testhelper_connectedselector.getMendixObject().getId());
+		}
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of TestHelper_SolverTest
+	 */
+	public final solver.proxies.SolverTest getTestHelper_SolverTest() throws com.mendix.core.CoreException
+	{
+		return getTestHelper_SolverTest(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of TestHelper_SolverTest
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final solver.proxies.SolverTest getTestHelper_SolverTest(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		solver.proxies.SolverTest result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.TestHelper_SolverTest.toString());
+		if (identifier != null) {
+			result = solver.proxies.SolverTest.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of TestHelper_SolverTest
+	 * @param testhelper_solvertest
+	 */
+	public final void setTestHelper_SolverTest(solver.proxies.SolverTest testhelper_solvertest)
+	{
+		setTestHelper_SolverTest(getContext(), testhelper_solvertest);
+	}
+
+	/**
+	 * Set value of TestHelper_SolverTest
+	 * @param context
+	 * @param testhelper_solvertest
+	 */
+	public final void setTestHelper_SolverTest(com.mendix.systemwideinterfaces.core.IContext context, solver.proxies.SolverTest testhelper_solvertest)
+	{
+		if (testhelper_solvertest == null) {
+			getMendixObject().setValue(context, MemberNames.TestHelper_SolverTest.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.TestHelper_SolverTest.toString(), testhelper_solvertest.getMendixObject().getId());
 		}
 	}
 

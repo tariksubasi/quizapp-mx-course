@@ -110,6 +110,7 @@ public class UserActionsRegistrar
     registrator.registerUserAction(oql.actions.CountRowsOQLStatement.class);
     registrator.registerUserAction(oql.actions.ExecuteOQLStatement.class);
     registrator.registerUserAction(oql.actions.ExportOQLToCSV.class);
+    registrator.registerUserAction(randomobject.actions.GetRandomObjectFromList.class);
     registrator.registerUserAction(system.actions.VerifyPassword.class);
   }
 }
