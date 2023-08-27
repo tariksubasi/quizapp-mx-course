@@ -151,7 +151,7 @@ public final class Microflows
 			.execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_SaveTestBuilder(
-		builder.proxies.TestBuilderHelper _testBuilderHelper
+		builder.proxies.TestHelper _testBuilderHelper
 	)
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_SaveTest");
@@ -161,7 +161,7 @@ public final class Microflows
 
 	public static void aCT_SaveTest(
 		IContext context,
-		builder.proxies.TestBuilderHelper _testBuilderHelper
+		builder.proxies.TestHelper _testBuilderHelper
 	)
 	{
 		aCT_SaveTestBuilder(
@@ -212,7 +212,7 @@ public final class Microflows
 			.execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ActiveQuestionBuilder(
-		builder.proxies.TestBuilderHelper _testBuilderHelper
+		builder.proxies.TestHelper _testBuilderHelper
 	)
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_ActiveQuestion");
@@ -222,7 +222,7 @@ public final class Microflows
 
 	public static builder.proxies.Question dS_ActiveQuestion(
 		IContext context,
-		builder.proxies.TestBuilderHelper _testBuilderHelper
+		builder.proxies.TestHelper _testBuilderHelper
 	)
 	{
 		Object result = dS_ActiveQuestionBuilder(
@@ -303,7 +303,7 @@ public final class Microflows
 		return result == null ? null : builder.proxies.ConnectedSelector.initialize(context, (IMendixObject) result);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_CreateTestBuilder(
-		builder.proxies.TestBuilderHelper _testBuilderHelper
+		builder.proxies.TestHelper _testBuilderHelper
 	)
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.SUB_CreateTest");
@@ -313,7 +313,7 @@ public final class Microflows
 
 	public static void sUB_CreateTest(
 		IContext context,
-		builder.proxies.TestBuilderHelper _testBuilderHelper
+		builder.proxies.TestHelper _testBuilderHelper
 	)
 	{
 		sUB_CreateTestBuilder(
@@ -322,7 +322,7 @@ public final class Microflows
 			.execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_ValidateTestBuilder(
-		builder.proxies.TestBuilderHelper _testBuilderHelper
+		builder.proxies.TestHelper _testBuilderHelper
 	)
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.SUB_ValidateTest");
@@ -332,7 +332,7 @@ public final class Microflows
 
 	public static boolean sUB_ValidateTest(
 		IContext context,
-		builder.proxies.TestBuilderHelper _testBuilderHelper
+		builder.proxies.TestHelper _testBuilderHelper
 	)
 	{
 		Object result = sUB_ValidateTestBuilder(
