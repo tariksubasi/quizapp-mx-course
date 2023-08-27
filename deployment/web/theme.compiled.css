@@ -26779,4 +26779,12 @@ input[type=checkbox].three-state-checkbox + .control-label {
   pointer-events: none;
 }
 
+.option-item:hover {
+  background-color: rgb(233, 227, 227);
+}
+
+.option-item-selected {
+  border: 1px dashed;
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */

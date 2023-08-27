@@ -212,21 +212,21 @@ public final class Microflows
 			.execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ActiveQuestionBuilder(
-		builder.proxies.TestHelper _testBuilderHelper
+		builder.proxies.TestHelper _testHelper
 	)
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.DS_ActiveQuestion");
-		builder = builder.withParam("TestBuilderHelper", _testBuilderHelper);
+		builder = builder.withParam("TestHelper", _testHelper);
 		return builder;
 	}
 
 	public static builder.proxies.Question dS_ActiveQuestion(
 		IContext context,
-		builder.proxies.TestHelper _testBuilderHelper
+		builder.proxies.TestHelper _testHelper
 	)
 	{
 		Object result = dS_ActiveQuestionBuilder(
-				_testBuilderHelper
+				_testHelper
 			)
 			.execute(context);
 		return result == null ? null : builder.proxies.Question.initialize(context, (IMendixObject) result);

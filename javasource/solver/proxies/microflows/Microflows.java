@@ -39,6 +39,26 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ActiveSolverQuestionBuilder(
+		builder.proxies.TestHelper _testHelper
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.DS_ActiveSolverQuestion");
+		builder = builder.withParam("TestHelper", _testHelper);
+		return builder;
+	}
+
+	public static solver.proxies.SolverQuestion dS_ActiveSolverQuestion(
+		IContext context,
+		builder.proxies.TestHelper _testHelper
+	)
+	{
+		Object result = dS_ActiveSolverQuestionBuilder(
+				_testHelper
+			)
+			.execute(context);
+		return result == null ? null : solver.proxies.SolverQuestion.initialize(context, (IMendixObject) result);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_QuestionList_GetBy_LectureBuilder(
 		builder.proxies.Lecture _lecture
 	)
