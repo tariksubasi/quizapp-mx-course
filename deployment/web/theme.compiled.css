@@ -26787,4 +26787,8 @@ input[type=checkbox].three-state-checkbox + .control-label {
   border: 1px dashed;
 }
 
+.disable-solver {
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */
