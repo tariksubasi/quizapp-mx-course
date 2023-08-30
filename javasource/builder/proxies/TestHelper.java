@@ -20,7 +20,7 @@ public class TestHelper implements com.mendix.systemwideinterfaces.core.IEntityP
 	 */
 	public enum MemberNames
 	{
-		ShowNextStep("ShowNextStep"),
+		TestStatus("TestStatus"),
 		ActiveQuestionSort("ActiveQuestionSort"),
 		BeginDate("BeginDate"),
 		TestHelper_Test("Builder.TestHelper_Test"),
@@ -78,39 +78,48 @@ public class TestHelper implements com.mendix.systemwideinterfaces.core.IEntityP
 	}
 
 	/**
-	 * @return value of ShowNextStep
+	 * Get value of TestStatus
+	 * @param teststatus
 	 */
-	public final java.lang.Boolean getShowNextStep()
+	public final solver.proxies.ENUM_TestStatus getTestStatus()
 	{
-		return getShowNextStep(getContext());
+		return getTestStatus(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of ShowNextStep
+	 * @return value of TestStatus
 	 */
-	public final java.lang.Boolean getShowNextStep(com.mendix.systemwideinterfaces.core.IContext context)
+	public final solver.proxies.ENUM_TestStatus getTestStatus(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.ShowNextStep.toString());
+		Object obj = getMendixObject().getValue(context, MemberNames.TestStatus.toString());
+		if (obj == null) {
+			return null;
+		}
+		return solver.proxies.ENUM_TestStatus.valueOf((java.lang.String) obj);
 	}
 
 	/**
-	 * Set value of ShowNextStep
-	 * @param shownextstep
+	 * Set value of TestStatus
+	 * @param teststatus
 	 */
-	public final void setShowNextStep(java.lang.Boolean shownextstep)
+	public final void setTestStatus(solver.proxies.ENUM_TestStatus teststatus)
 	{
-		setShowNextStep(getContext(), shownextstep);
+		setTestStatus(getContext(), teststatus);
 	}
 
 	/**
-	 * Set value of ShowNextStep
+	 * Set value of TestStatus
 	 * @param context
-	 * @param shownextstep
+	 * @param teststatus
 	 */
-	public final void setShowNextStep(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean shownextstep)
+	public final void setTestStatus(com.mendix.systemwideinterfaces.core.IContext context, solver.proxies.ENUM_TestStatus teststatus)
 	{
-		getMendixObject().setValue(context, MemberNames.ShowNextStep.toString(), shownextstep);
+		if (teststatus != null) {
+			getMendixObject().setValue(context, MemberNames.TestStatus.toString(), teststatus.toString());
+		} else {
+			getMendixObject().setValue(context, MemberNames.TestStatus.toString(), null);
+		}
 	}
 
 	/**

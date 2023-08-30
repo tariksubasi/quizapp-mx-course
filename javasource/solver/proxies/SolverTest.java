@@ -22,6 +22,7 @@ public class SolverTest extends quizapp.proxies.RemoteObject
 		WrongAnswerCount("WrongAnswerCount"),
 		EmptyAnswerCount("EmptyAnswerCount"),
 		TestName("TestName"),
+		TestStatus("TestStatus"),
 		_Id("_Id"),
 		CustomCreatedDate("CustomCreatedDate"),
 		CustomChangedDate("CustomChangedDate"),
@@ -298,6 +299,51 @@ public class SolverTest extends quizapp.proxies.RemoteObject
 	public final void setTestName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String testname)
 	{
 		getMendixObject().setValue(context, MemberNames.TestName.toString(), testname);
+	}
+
+	/**
+	 * Get value of TestStatus
+	 * @param teststatus
+	 */
+	public final solver.proxies.ENUM_TestStatus getTestStatus()
+	{
+		return getTestStatus(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of TestStatus
+	 */
+	public final solver.proxies.ENUM_TestStatus getTestStatus(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.TestStatus.toString());
+		if (obj == null) {
+			return null;
+		}
+		return solver.proxies.ENUM_TestStatus.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of TestStatus
+	 * @param teststatus
+	 */
+	public final void setTestStatus(solver.proxies.ENUM_TestStatus teststatus)
+	{
+		setTestStatus(getContext(), teststatus);
+	}
+
+	/**
+	 * Set value of TestStatus
+	 * @param context
+	 * @param teststatus
+	 */
+	public final void setTestStatus(com.mendix.systemwideinterfaces.core.IContext context, solver.proxies.ENUM_TestStatus teststatus)
+	{
+		if (teststatus != null) {
+			getMendixObject().setValue(context, MemberNames.TestStatus.toString(), teststatus.toString());
+		} else {
+			getMendixObject().setValue(context, MemberNames.TestStatus.toString(), null);
+		}
 	}
 
 	@java.lang.Override
