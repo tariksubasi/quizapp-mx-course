@@ -22,6 +22,7 @@ public class TestHelper implements com.mendix.systemwideinterfaces.core.IEntityP
 	{
 		ShowNextStep("ShowNextStep"),
 		ActiveQuestionSort("ActiveQuestionSort"),
+		BeginDate("BeginDate"),
 		TestHelper_Test("Builder.TestHelper_Test"),
 		TestHelper_ConnectedSelector("Builder.TestHelper_ConnectedSelector"),
 		TestHelper_SolverTest("Builder.TestHelper_SolverTest");
@@ -146,6 +147,42 @@ public class TestHelper implements com.mendix.systemwideinterfaces.core.IEntityP
 	public final void setActiveQuestionSort(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer activequestionsort)
 	{
 		getMendixObject().setValue(context, MemberNames.ActiveQuestionSort.toString(), activequestionsort);
+	}
+
+	/**
+	 * @return value of BeginDate
+	 */
+	public final java.util.Date getBeginDate()
+	{
+		return getBeginDate(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of BeginDate
+	 */
+	public final java.util.Date getBeginDate(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.BeginDate.toString());
+	}
+
+	/**
+	 * Set value of BeginDate
+	 * @param begindate
+	 */
+	public final void setBeginDate(java.util.Date begindate)
+	{
+		setBeginDate(getContext(), begindate);
+	}
+
+	/**
+	 * Set value of BeginDate
+	 * @param context
+	 * @param begindate
+	 */
+	public final void setBeginDate(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date begindate)
+	{
+		getMendixObject().setValue(context, MemberNames.BeginDate.toString(), begindate);
 	}
 
 	/**
