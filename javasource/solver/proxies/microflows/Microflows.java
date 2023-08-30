@@ -16,6 +16,25 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the Solver module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_FinishTestBuilder(
+		builder.proxies.TestHelper _testHelper
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.ACT_FinishTest");
+		builder = builder.withParam("TestHelper", _testHelper);
+		return builder;
+	}
+
+	public static void aCT_FinishTest(
+		IContext context,
+		builder.proxies.TestHelper _testHelper
+	)
+	{
+		aCT_FinishTestBuilder(
+				_testHelper
+			)
+			.execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_GenerateSolverTestBuilder(
 		builder.proxies.ConnectedSelector _connectedSelector,
 		builder.proxies.TestHelper _testHelper
@@ -78,5 +97,29 @@ public final class Microflows
 			)
 			.execute(context);
 		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Question.initialize(context, obj));
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_SolverTest_SetSolverTestStatsBuilder(
+		java.util.List<solver.proxies.SolverQuestion> _solverQuestionList,
+		solver.proxies.SolverTest _solverTest
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.SUB_SolverTest_SetSolverTestStats");
+		builder = builder.withParam("SolverQuestionList", _solverQuestionList);
+		builder = builder.withParam("SolverTest", _solverTest);
+		return builder;
+	}
+
+	public static solver.proxies.SolverTest sUB_SolverTest_SetSolverTestStats(
+		IContext context,
+		java.util.List<solver.proxies.SolverQuestion> _solverQuestionList,
+		solver.proxies.SolverTest _solverTest
+	)
+	{
+		Object result = sUB_SolverTest_SetSolverTestStatsBuilder(
+				_solverQuestionList,
+				_solverTest
+			)
+			.execute(context);
+		return result == null ? null : solver.proxies.SolverTest.initialize(context, (IMendixObject) result);
 	}
 }

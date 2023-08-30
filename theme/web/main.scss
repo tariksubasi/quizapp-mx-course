@@ -12,3 +12,7 @@
 .disable-solver {
     pointer-events: none;
 }
+
+.mx-listview > ul > li {
+    padding : 0 !important;
+}

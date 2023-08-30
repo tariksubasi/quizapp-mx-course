@@ -26791,4 +26791,8 @@ input[type=checkbox].three-state-checkbox + .control-label {
   pointer-events: none;
 }
 
+.mx-listview > ul > li {
+  padding: 0 !important;
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */
