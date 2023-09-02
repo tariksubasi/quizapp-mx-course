@@ -2,13 +2,11 @@ Initialized native services in: C:\Users\TKA\.gradle\native
 Initialized jansi services in: C:\Users\TKA\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot': {JAVA_HOME=C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot, JAVA_VERSION=11.0.3, JAVA_VENDOR=AdoptOpenJDK, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=11.0.3+7, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=11.0.3+7, VM_VENDOR=AdoptOpenJDK, OS_ARCH=amd64}
 The client will now receive all logging from the daemon (pid: 8852). The daemon log file: C:\Users\TKA\.gradle\daemon\7.6\daemon-8852.out.log
-Starting 10th build in daemon [uptime: 1 hrs 42 mins 43.753 secs, performance: 99%, non-heap usage: 25% of 256 MiB]
+Starting 13th build in daemon [uptime: 3 hrs 19 mins 35.085 secs, performance: 99%, non-heap usage: 25% of 256 MiB]
 Using 12 worker leases.
 Now considering [C:\Users\TKA\Documents\Mendix\QuizApp\deployment] as hierarchies to watch
 Watching the file system is configured to be enabled if available
 File system watching is active
-Invalidating in-memory cache of C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\fileHashes\fileHashes.bin
-Invalidating in-memory cache of C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\fileHashes\resourceHashesCache.bin
 Starting Build
 Settings evaluated using settings file 'C:\Users\TKA\Documents\Mendix\QuizApp\deployment\settings.gradle'.
 Projects loaded. Root project using build file 'C:\Users\TKA\Documents\Mendix\QuizApp\deployment\build.gradle'.
@@ -24,18 +22,16 @@ Selected primary task 'deploy' from project :
 Tasks to be executed: [task ':clean-excluded-jars', task ':copyDeploymentArtifacts', task ':copyLibs', task ':copyResources', task ':unzipDataSnapshot', task ':deploy']
 Tasks that were excluded: []
 Resolve mutations for :clean-excluded-jars (Thread[Execution worker,5,main]) started.
-:clean-excluded-jars (Thread[Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[Execution worker Thread 2,5,main]) started.
-Invalidating in-memory cache of C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\executionHistory\executionHistory.bin
-Invalidating in-memory cache of C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\buildOutputCleanup\outputFiles.bin
+:clean-excluded-jars (Thread[Execution worker Thread 7,5,main]) started.
+destroyer locations for task group 0 (Thread[Execution worker,5,main]) started.
 
 > Task :clean-excluded-jars UP-TO-DATE
 Caching disabled for task ':clean-excluded-jars' because:
   Build cache is disabled
 Task ':clean-excluded-jars' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :copyDeploymentArtifacts (Thread[Execution worker,5,main]) started.
-:copyDeploymentArtifacts (Thread[Execution worker,5,main]) started.
+Resolve mutations for :copyDeploymentArtifacts (Thread[Execution worker Thread 7,5,main]) started.
+:copyDeploymentArtifacts (Thread[Execution worker Thread 9,5,main]) started.
 
 > Task :copyDeploymentArtifacts
 Caching disabled for task ':copyDeploymentArtifacts' because:
@@ -44,33 +40,33 @@ Task ':copyDeploymentArtifacts' is not up-to-date because:
   Task state is not tracked.
 Not watching anything anymore
 Watching 0 directory hierarchies to track changes
-Resolve mutations for :copyLibs (Thread[Execution worker,5,main]) started.
-:copyLibs (Thread[Execution worker,5,main]) started.
+Resolve mutations for :copyLibs (Thread[Execution worker Thread 9,5,main]) started.
+:copyLibs (Thread[Execution worker Thread 9,5,main]) started.
 
 > Task :copyLibs UP-TO-DATE
 Watching 1 directory hierarchies to track changes
 Caching disabled for task ':copyLibs' because:
   Build cache is disabled
 Skipping task ':copyLibs' as it is up-to-date.
-Resolve mutations for :copyResources (Thread[Execution worker,5,main]) started.
-:copyResources (Thread[Execution worker,5,main]) started.
+Resolve mutations for :copyResources (Thread[Execution worker Thread 9,5,main]) started.
+:copyResources (Thread[Execution worker Thread 9,5,main]) started.
 
 > Task :copyResources UP-TO-DATE
 Caching disabled for task ':copyResources' because:
   Build cache is disabled
 Skipping task ':copyResources' as it is up-to-date.
-Resolve mutations for :unzipDataSnapshot (Thread[Execution worker,5,main]) started.
-:unzipDataSnapshot (Thread[Execution worker,5,main]) started.
+Resolve mutations for :unzipDataSnapshot (Thread[Execution worker Thread 9,5,main]) started.
+:unzipDataSnapshot (Thread[Execution worker Thread 9,5,main]) started.
 
 > Task :unzipDataSnapshot SKIPPED
 Skipping task ':unzipDataSnapshot' as task onlyIf 'Task is enabled' is false.
-Resolve mutations for :deploy (Thread[Execution worker Thread 8,5,main]) started.
-:deploy (Thread[Execution worker Thread 8,5,main]) started.
+Resolve mutations for :deploy (Thread[Execution worker Thread 9,5,main]) started.
+:deploy (Thread[Execution worker Thread 9,5,main]) started.
 
 > Task :deploy
 Skipping task ':deploy' as it has no actions.
 
-BUİLD SUCCESSFUL in 990ms
+BUİLD SUCCESSFUL in 917ms
 4 actionable tasks: 1 executed, 3 up-to-date
 Watched directory hierarchies: [C:\Users\TKA\Documents\Mendix\QuizApp\deployment]
 
