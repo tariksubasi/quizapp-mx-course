@@ -28,6 +28,7 @@ public class SolverTest extends quizapp.proxies.RemoteObject
 		CustomChangedDate("CustomChangedDate"),
 		CustomCreatedDateAsLong("CustomCreatedDateAsLong"),
 		CustomChangedDateAsLong("CustomChangedDateAsLong"),
+		SolverTest_Lecture("Solver.SolverTest_Lecture"),
 		RemoteObject_Account_CreatedBy("QuizApp.RemoteObject_Account_CreatedBy"),
 		RemoteObject_Account_ChangedBy("QuizApp.RemoteObject_Account_ChangedBy");
 
@@ -343,6 +344,53 @@ public class SolverTest extends quizapp.proxies.RemoteObject
 			getMendixObject().setValue(context, MemberNames.TestStatus.toString(), teststatus.toString());
 		} else {
 			getMendixObject().setValue(context, MemberNames.TestStatus.toString(), null);
+		}
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of SolverTest_Lecture
+	 */
+	public final builder.proxies.Lecture getSolverTest_Lecture() throws com.mendix.core.CoreException
+	{
+		return getSolverTest_Lecture(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of SolverTest_Lecture
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final builder.proxies.Lecture getSolverTest_Lecture(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		builder.proxies.Lecture result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.SolverTest_Lecture.toString());
+		if (identifier != null) {
+			result = builder.proxies.Lecture.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of SolverTest_Lecture
+	 * @param solvertest_lecture
+	 */
+	public final void setSolverTest_Lecture(builder.proxies.Lecture solvertest_lecture)
+	{
+		setSolverTest_Lecture(getContext(), solvertest_lecture);
+	}
+
+	/**
+	 * Set value of SolverTest_Lecture
+	 * @param context
+	 * @param solvertest_lecture
+	 */
+	public final void setSolverTest_Lecture(com.mendix.systemwideinterfaces.core.IContext context, builder.proxies.Lecture solvertest_lecture)
+	{
+		if (solvertest_lecture == null) {
+			getMendixObject().setValue(context, MemberNames.SolverTest_Lecture.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.SolverTest_Lecture.toString(), solvertest_lecture.getMendixObject().getId());
 		}
 	}
 

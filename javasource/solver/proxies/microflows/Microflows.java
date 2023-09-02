@@ -58,6 +58,25 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_ReviewTest_FromSolvedTestsBuilder(
+		solver.proxies.SolverTest _solverTest
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.ACT_ReviewTest_FromSolvedTests");
+		builder = builder.withParam("SolverTest", _solverTest);
+		return builder;
+	}
+
+	public static void aCT_ReviewTest_FromSolvedTests(
+		IContext context,
+		solver.proxies.SolverTest _solverTest
+	)
+	{
+		aCT_ReviewTest_FromSolvedTestsBuilder(
+				_solverTest
+			)
+			.execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_ActiveSolverQuestionBuilder(
 		builder.proxies.TestHelper _testHelper
 	)
@@ -77,6 +96,26 @@ public final class Microflows
 			)
 			.execute(context);
 		return result == null ? null : solver.proxies.SolverQuestion.initialize(context, (IMendixObject) result);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_ConnectedSelector_GetFromSolverTestBuilder(
+		solver.proxies.SolverTest _solverTest
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.SUB_ConnectedSelector_GetFromSolverTest");
+		builder = builder.withParam("SolverTest", _solverTest);
+		return builder;
+	}
+
+	public static builder.proxies.ConnectedSelector sUB_ConnectedSelector_GetFromSolverTest(
+		IContext context,
+		solver.proxies.SolverTest _solverTest
+	)
+	{
+		Object result = sUB_ConnectedSelector_GetFromSolverTestBuilder(
+				_solverTest
+			)
+			.execute(context);
+		return result == null ? null : builder.proxies.ConnectedSelector.initialize(context, (IMendixObject) result);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_QuestionList_GetBy_LectureBuilder(
 		builder.proxies.Lecture _lecture
