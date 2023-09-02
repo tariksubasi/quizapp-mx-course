@@ -58,6 +58,29 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_ReviewQuestion_FromSolvedTestsBuilder(
+		solver.proxies.SolverTest _solverTest,
+		solver.proxies.SolverQuestion _solverQuestion
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.ACT_ReviewQuestion_FromSolvedTests");
+		builder = builder.withParam("SolverTest", _solverTest);
+		builder = builder.withParam("SolverQuestion", _solverQuestion);
+		return builder;
+	}
+
+	public static void aCT_ReviewQuestion_FromSolvedTests(
+		IContext context,
+		solver.proxies.SolverTest _solverTest,
+		solver.proxies.SolverQuestion _solverQuestion
+	)
+	{
+		aCT_ReviewQuestion_FromSolvedTestsBuilder(
+				_solverTest,
+				_solverQuestion
+			)
+			.execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_ReviewTest_FromSolvedTestsBuilder(
 		solver.proxies.SolverTest _solverTest
 	)
