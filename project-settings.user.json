@@ -10,17 +10,7 @@
     {
       "suppressions": [],
       "disabledBestPractices": [],
-      "readRecommendations": [
-        {
-          "code": "MXP011",
-          "locationObjects": [
-            {
-              "uuid": "beacc59f-7eb3-4eea-ba50-cfef201f2daa",
-              "fullPath": "dataView4 (DataView) < container3 (DivContainer) < 799f4609-661c-4946-83c2-06794393f545 (LayoutGridColumn) < 51268ab5-91e3-4429-9554-ca3b376e416c (LayoutGridRow) < layoutGrid2 (LayoutGrid) < dataView3 (DataView) < dataView1 (DataView) < ad1774ae-c3bc-489a-8aae-775c31327f80 (LayoutCallArgument) < 66cf68cd-eacc-4957-aed1-386a0eabd0b0 (LayoutCall) < Solver.TestSolver_Web"
-            }
-          ]
-        }
-      ],
+      "readRecommendations": [],
       "suppressedRecommendations": [],
       "hasShownRecommendationsNotificationForThisApp": true,
       "type": "Mendix.Modeler.MxAssist.PerformanceBot.Serialization.Configuration.PerformanceBotConfiguration, Mendix.Modeler.MxAssist.PerformanceBot.Serialization, Version=10.1.1.0, Culture=neutral, PublicKeyToken=null"
