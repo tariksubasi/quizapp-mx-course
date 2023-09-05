@@ -2,7 +2,7 @@ Initialized native services in: C:\Users\TKA\.gradle\native
 Initialized jansi services in: C:\Users\TKA\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot': {JAVA_HOME=C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot, JAVA_VERSION=11.0.3, JAVA_VENDOR=AdoptOpenJDK, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=11.0.3+7, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=11.0.3+7, VM_VENDOR=AdoptOpenJDK, OS_ARCH=amd64}
 The client will now receive all logging from the daemon (pid: 22768). The daemon log file: C:\Users\TKA\.gradle\daemon\7.6\daemon-22768.out.log
-Starting 7th build in daemon [uptime: 2 hrs 21 mins 13.365 secs, performance: 99%, non-heap usage: 25% of 256 MiB]
+Starting 12th build in daemon [uptime: 4 hrs 22 mins 21.679 secs, performance: 99%, non-heap usage: 25% of 256 MiB]
 Using 12 worker leases.
 Now considering [C:\Users\TKA\Documents\Mendix\QuizApp\deployment, C:\Users\TKA\Desktop\QuizApp_Test\deployment] as hierarchies to watch
 Watching the file system is configured to be enabled if available
@@ -25,17 +25,17 @@ Selected primary task 'package' from project :
 Tasks to be executed: [task ':clean-custom-classes', task ':compile', task ':package']
 Tasks that were excluded: []
 Resolve mutations for :clean-custom-classes (Thread[Execution worker,5,main]) started.
-:clean-custom-classes (Thread[Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[Execution worker Thread 5,5,main]) started.
-destroyer locations for task group 1 (Thread[Execution worker Thread 5,5,main]) started.
+:clean-custom-classes (Thread[Execution worker Thread 10,5,main]) started.
+destroyer locations for task group 0 (Thread[Execution worker,5,main]) started.
+destroyer locations for task group 1 (Thread[Execution worker,5,main]) started.
 
 > Task :clean-custom-classes
 Caching disabled for task ':clean-custom-classes' because:
   Build cache is disabled
 Task ':clean-custom-classes' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :compile (Thread[Execution worker,5,main]) started.
-:compile (Thread[Execution worker,5,main]) started.
+Resolve mutations for :compile (Thread[Execution worker Thread 10,5,main]) started.
+:compile (Thread[Execution worker Thread 10,5,main]) started.
 
 > Task :compile
 Caching disabled for task ':compile' because:
@@ -49,10 +49,10 @@ file or directory 'C:\Users\TKA\Documents\Mendix\QuizApp\vendorlib', not found
 Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
 Compiling with toolchain 'C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot'.
 Compiling with JDK Java compiler API.
-Class dependency analysis for incremental compilation took 0.082 secs.
-Created classpath snapshot for incremental compilation in 0.013 secs.
-Resolve mutations for :package (Thread[Execution worker,5,main]) started.
-:package (Thread[Execution worker,5,main]) started.
+Class dependency analysis for incremental compilation took 0.066 secs.
+Created classpath snapshot for incremental compilation in 0.008 secs.
+Resolve mutations for :package (Thread[Execution worker Thread 10,5,main]) started.
+:package (Thread[Execution worker Thread 10,5,main]) started.
 
 > Task :package UP-TO-DATE
 Caching disabled for task ':package' because:
