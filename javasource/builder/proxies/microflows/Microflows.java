@@ -104,6 +104,16 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_GenerateBuilderTestsBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.ACT_GenerateBuilderTests");
+		return builder;
+	}
+
+	public static void aCT_GenerateBuilderTests(IContext context)
+	{
+		aCT_GenerateBuilderTestsBuilder().execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Lecture_DeleteBuilder(
 		builder.proxies.Lecture _lecture,
 		builder.proxies.Course _course
@@ -320,6 +330,16 @@ public final class Microflows
 				_testBuilderHelper
 			)
 			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_GenerateSingleBuilderTestBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Builder.SUB_GenerateSingleBuilderTest");
+		return builder;
+	}
+
+	public static void sUB_GenerateSingleBuilderTest(IContext context)
+	{
+		sUB_GenerateSingleBuilderTestBuilder().execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_ValidateTestBuilder(
 		builder.proxies.TestHelper _testBuilderHelper
