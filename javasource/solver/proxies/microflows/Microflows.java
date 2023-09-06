@@ -35,6 +35,16 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_GenerateSolvedTestsBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.ACT_GenerateSolvedTests");
+		return builder;
+	}
+
+	public static void aCT_GenerateSolvedTests(IContext context)
+	{
+		aCT_GenerateSolvedTestsBuilder().execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_GenerateSolverTestBuilder(
 		builder.proxies.ConnectedSelector _connectedSelector,
 		builder.proxies.TestHelper _testHelper
@@ -139,6 +149,40 @@ public final class Microflows
 			)
 			.execute(context);
 		return result == null ? null : builder.proxies.ConnectedSelector.initialize(context, (IMendixObject) result);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_CreateSolverQuestionsBuilder(
+		solver.proxies.SolverTest _solverTest,
+		java.util.List<builder.proxies.Question> _questionList
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.SUB_CreateSolverQuestions");
+		builder = builder.withParam("SolverTest", _solverTest);
+		builder = builder.withParam("QuestionList", _questionList);
+		return builder;
+	}
+
+	public static java.util.List<solver.proxies.SolverQuestion> sUB_CreateSolverQuestions(
+		IContext context,
+		solver.proxies.SolverTest _solverTest,
+		java.util.List<builder.proxies.Question> _questionList
+	)
+	{
+		Object result = sUB_CreateSolverQuestionsBuilder(
+				_solverTest,
+				_questionList
+			)
+			.execute(context);
+		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> solver.proxies.SolverQuestion.initialize(context, obj));
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_GenerateSingleSolverTestBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("Solver.SUB_GenerateSingleSolverTest");
+		return builder;
+	}
+
+	public static void sUB_GenerateSingleSolverTest(IContext context)
+	{
+		sUB_GenerateSingleSolverTestBuilder().execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_QuestionList_GetBy_LectureBuilder(
 		builder.proxies.Lecture _lecture
