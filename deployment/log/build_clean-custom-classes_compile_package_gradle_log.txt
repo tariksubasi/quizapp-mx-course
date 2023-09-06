@@ -2,9 +2,9 @@ Initialized native services in: C:\Users\TKA\.gradle\native
 Initialized jansi services in: C:\Users\TKA\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot': {JAVA_HOME=C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot, JAVA_VERSION=11.0.3, JAVA_VENDOR=AdoptOpenJDK, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=11.0.3+7, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=11.0.3+7, VM_VENDOR=AdoptOpenJDK, OS_ARCH=amd64}
 The client will now receive all logging from the daemon (pid: 14324). The daemon log file: C:\Users\TKA\.gradle\daemon\7.6\daemon-14324.out.log
-Starting 3rd build in daemon [uptime: 23.116 secs, performance: 100%, non-heap usage: 18% of 256 MiB]
+Starting 25th build in daemon [uptime: 7 hrs 50 mins 52.99 secs, performance: 98%, non-heap usage: 26% of 256 MiB]
 Using 12 worker leases.
-Now considering [C:\Users\TKA\Documents\Mendix\QuizApp\deployment] as hierarchies to watch
+Now considering [C:\Users\TKA\Documents\Mendix\QuizApp\deployment, C:\Users\TKA\Desktop\QuizApp_Test\deployment] as hierarchies to watch
 Watching the file system is configured to be enabled if available
 File system watching is active
 Starting Build
@@ -25,17 +25,17 @@ Selected primary task 'package' from project :
 Tasks to be executed: [task ':clean-custom-classes', task ':compile', task ':package']
 Tasks that were excluded: []
 Resolve mutations for :clean-custom-classes (Thread[Execution worker,5,main]) started.
-:clean-custom-classes (Thread[Execution worker Thread 10,5,main]) started.
-destroyer locations for task group 0 (Thread[Execution worker Thread 3,5,main]) started.
-destroyer locations for task group 1 (Thread[Execution worker Thread 3,5,main]) started.
+:clean-custom-classes (Thread[Execution worker Thread 7,5,main]) started.
+destroyer locations for task group 0 (Thread[included builds,5,main]) started.
+destroyer locations for task group 1 (Thread[included builds,5,main]) started.
 
 > Task :clean-custom-classes
 Caching disabled for task ':clean-custom-classes' because:
   Build cache is disabled
 Task ':clean-custom-classes' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :compile (Thread[Execution worker Thread 10,5,main]) started.
-:compile (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :compile (Thread[Execution worker Thread 7,5,main]) started.
+:compile (Thread[Execution worker Thread 7,5,main]) started.
 
 > Task :compile
 Caching disabled for task ':compile' because:
@@ -49,20 +49,22 @@ file or directory 'C:\Users\TKA\Documents\Mendix\QuizApp\vendorlib', not found
 Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
 Compiling with toolchain 'C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot'.
 Compiling with JDK Java compiler API.
-Class dependency analysis for incremental compilation took 0.152 secs.
-Created classpath snapshot for incremental compilation in 0.108 secs.
-Resolve mutations for :package (Thread[Execution worker Thread 10,5,main]) started.
-:package (Thread[Execution worker Thread 10,5,main]) started.
+Class dependency analysis for incremental compilation took 0.072 secs.
+Created classpath snapshot for incremental compilation in 0.007 secs.
+Resolve mutations for :package (Thread[Execution worker Thread 7,5,main]) started.
+:package (Thread[Execution worker Thread 7,5,main]) started.
 
 > Task :package
 Caching disabled for task ':package' because:
   Build cache is disabled
 Task ':package' is not up-to-date because:
-  Input property 'rootSpec$1$1' file C:\Users\TKA\Documents\Mendix\QuizApp\deployment\run\bin\solver\proxies\microflows\Microflows.class has changed.
+  Input property 'rootSpec$1$1' file C:\Users\TKA\Documents\Mendix\QuizApp\deployment\run\bin\datastore has been added.
+  Input property 'rootSpec$1$1' file C:\Users\TKA\Documents\Mendix\QuizApp\deployment\run\bin\datastore\proxies has been added.
+  Input property 'rootSpec$1$1' file C:\Users\TKA\Documents\Mendix\QuizApp\deployment\run\bin\datastore\proxies\Lecture$MemberNames.class has been added.
 
-BUİLD SUCCESSFUL in 4s
+BUİLD SUCCESSFUL in 2s
 3 actionable tasks: 3 executed
-Watched directory hierarchies: [C:\Users\TKA\Documents\Mendix\QuizApp\deployment]
+Watched directory hierarchies: [C:\Users\TKA\Documents\Mendix\QuizApp\deployment, C:\Users\TKA\Desktop\QuizApp_Test\deployment]
 
 
 Note: Some input files use or override a deprecated API.

@@ -2,9 +2,10 @@ Initialized native services in: C:\Users\TKA\.gradle\native
 Initialized jansi services in: C:\Users\TKA\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot': {JAVA_HOME=C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot, JAVA_VERSION=11.0.3, JAVA_VENDOR=AdoptOpenJDK, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=11.0.3+7, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=11.0.3+7, VM_VENDOR=AdoptOpenJDK, OS_ARCH=amd64}
 The client will now receive all logging from the daemon (pid: 14324). The daemon log file: C:\Users\TKA\.gradle\daemon\7.6\daemon-14324.out.log
-Starting 4th build in daemon [uptime: 2 mins 56.94 secs, performance: 99%, non-heap usage: 25% of 256 MiB]
+Starting 24th build in daemon [uptime: 7 hrs 50 mins 47.874 secs, performance: 98%, non-heap usage: 26% of 256 MiB]
 Using 12 worker leases.
-Now considering [C:\Users\TKA\Documents\Mendix\QuizApp\deployment] as hierarchies to watch
+Now considering [C:\Users\TKA\Documents\Mendix\QuizApp\deployment, C:\Users\TKA\Desktop\QuizApp_Test\deployment] as hierarchies to watch
+Watching 2 directory hierarchies to track changes
 Watching the file system is configured to be enabled if available
 File system watching is active
 Starting Build
@@ -21,54 +22,59 @@ Selected primary task 'clean-excluded-jars' from project :
 Selected primary task 'deploy' from project :
 Tasks to be executed: [task ':clean-excluded-jars', task ':copyDeploymentArtifacts', task ':copyLibs', task ':copyResources', task ':unzipDataSnapshot', task ':deploy']
 Tasks that were excluded: []
-Resolve mutations for :clean-excluded-jars (Thread[Execution worker Thread 2,5,main]) started.
-:clean-excluded-jars (Thread[Execution worker Thread 2,5,main]) started.
-destroyer locations for task group 0 (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :clean-excluded-jars (Thread[Execution worker,5,main]) started.
+:clean-excluded-jars (Thread[Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[Execution worker Thread 9,5,main]) started.
 
 > Task :clean-excluded-jars UP-TO-DATE
 Caching disabled for task ':clean-excluded-jars' because:
   Build cache is disabled
 Task ':clean-excluded-jars' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :copyDeploymentArtifacts (Thread[Execution worker Thread 2,5,main]) started.
-:copyDeploymentArtifacts (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :copyDeploymentArtifacts (Thread[Execution worker,5,main]) started.
+:copyDeploymentArtifacts (Thread[Execution worker,5,main]) started.
 
 > Task :copyDeploymentArtifacts
 Caching disabled for task ':copyDeploymentArtifacts' because:
   Build cache is disabled
 Task ':copyDeploymentArtifacts' is not up-to-date because:
   Task state is not tracked.
-Not watching anything anymore
-Watching 0 directory hierarchies to track changes
-Resolve mutations for :copyLibs (Thread[Execution worker Thread 10,5,main]) started.
-:copyLibs (Thread[Execution worker Thread 10,5,main]) started.
+Watching 1 directory hierarchies to track changes
+Resolve mutations for :copyLibs (Thread[Execution worker,5,main]) started.
+:copyLibs (Thread[Execution worker Thread 11,5,main]) started.
 
 > Task :copyLibs UP-TO-DATE
-Watching 1 directory hierarchies to track changes
+Watching 2 directory hierarchies to track changes
 Caching disabled for task ':copyLibs' because:
   Build cache is disabled
 Skipping task ':copyLibs' as it is up-to-date.
-Resolve mutations for :copyResources (Thread[Execution worker Thread 2,5,main]) started.
-:copyResources (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :copyResources (Thread[Execution worker Thread 11,5,main]) started.
+:copyResources (Thread[Execution worker Thread 11,5,main]) started.
 
 > Task :copyResources UP-TO-DATE
 Caching disabled for task ':copyResources' because:
   Build cache is disabled
 Skipping task ':copyResources' as it is up-to-date.
-Resolve mutations for :unzipDataSnapshot (Thread[Execution worker Thread 2,5,main]) started.
-:unzipDataSnapshot (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :unzipDataSnapshot (Thread[Execution worker Thread 11,5,main]) started.
+:unzipDataSnapshot (Thread[Execution worker Thread 11,5,main]) started.
 
 > Task :unzipDataSnapshot SKIPPED
 Skipping task ':unzipDataSnapshot' as task onlyIf 'Task is enabled' is false.
-Resolve mutations for :deploy (Thread[Execution worker Thread 10,5,main]) started.
-:deploy (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :deploy (Thread[Execution worker Thread 11,5,main]) started.
+:deploy (Thread[Execution worker Thread 11,5,main]) started.
 
 > Task :deploy
 Skipping task ':deploy' as it has no actions.
 
-BUİLD SUCCESSFUL in 929ms
+BUİLD SUCCESSFUL in 991ms
 4 actionable tasks: 1 executed, 3 up-to-date
-Watched directory hierarchies: [C:\Users\TKA\Documents\Mendix\QuizApp\deployment]
+Watched directory hierarchies: [C:\Users\TKA\Documents\Mendix\QuizApp\deployment, C:\Users\TKA\Desktop\QuizApp_Test\deployment]
+VCS Checkout Cache (C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\vcs-1) removing files not accessed on or after Wed Aug 30 17:20:02 EET 2023.
+VCS Checkout Cache (C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\vcs-1) cleanup deleted 0 files/directories.
+VCS Checkout Cache (C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\vcs-1) cleaned up in 0.001 secs.
+dependencies-accessors (C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\dependencies-accessors) removing files not accessed on or after Wed Aug 30 17:20:02 EET 2023.
+dependencies-accessors (C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\dependencies-accessors) cleanup deleted 0 files/directories.
+dependencies-accessors (C:\Users\TKA\Documents\Mendix\QuizApp\deployment\.gradle\7.6\dependencies-accessors) cleaned up in 0.0 secs.
 
 
 
