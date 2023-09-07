@@ -15,14 +15,84 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the DataStore module
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Lecture_FromOQLBuilder()
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Lecture_FromOQL_V1Builder()
 	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.ACT_Lecture_FromOQL");
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.ACT_Lecture_FromOQL_V1");
 		return builder;
 	}
 
-	public static void aCT_Lecture_FromOQL(IContext context)
+	public static void aCT_Lecture_FromOQL_V1(IContext context)
 	{
-		aCT_Lecture_FromOQLBuilder().execute(context);
+		aCT_Lecture_FromOQL_V1Builder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Lecture_FromOQL_V2Builder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.ACT_Lecture_FromOQL_V2");
+		return builder;
+	}
+
+	public static void aCT_Lecture_FromOQL_V2(IContext context)
+	{
+		aCT_Lecture_FromOQL_V2Builder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder cNV_CourseNameBuilder(
+		java.lang.String _courseName
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.CNV_CourseName");
+		builder = builder.withParam("CourseName", _courseName);
+		return builder;
+	}
+
+	public static java.lang.String cNV_CourseName(
+		IContext context,
+		java.lang.String _courseName
+	)
+	{
+		Object result = cNV_CourseNameBuilder(
+				_courseName
+			)
+			.execute(context);
+		return (java.lang.String) result;
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder cNV_LectureNameBuilder(
+		java.lang.String _lectureName
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.CNV_LectureName");
+		builder = builder.withParam("LectureName", _lectureName);
+		return builder;
+	}
+
+	public static java.lang.String cNV_LectureName(
+		IContext context,
+		java.lang.String _lectureName
+	)
+	{
+		Object result = cNV_LectureNameBuilder(
+				_lectureName
+			)
+			.execute(context);
+		return (java.lang.String) result;
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder cNV_SchoolTypeBuilder(
+		java.lang.String _schoolType
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.CNV_SchoolType");
+		builder = builder.withParam("SchoolType", _schoolType);
+		return builder;
+	}
+
+	public static java.lang.String cNV_SchoolType(
+		IContext context,
+		java.lang.String _schoolType
+	)
+	{
+		Object result = cNV_SchoolTypeBuilder(
+				_schoolType
+			)
+			.execute(context);
+		return (java.lang.String) result;
 	}
 }

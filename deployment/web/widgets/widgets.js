@@ -1,1 +1,1 @@
-define(["CSVasTable/widget/CSVasTable"], {});
+define(["CSVasTable/widget/CSVasTable", "JSON/widget/Editor"], {});
