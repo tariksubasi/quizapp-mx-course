@@ -15,6 +15,16 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the DataStore module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_BuilderTest_GetByUserBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.ACT_BuilderTest_GetByUser");
+		return builder;
+	}
+
+	public static void aCT_BuilderTest_GetByUser(IContext context)
+	{
+		aCT_BuilderTest_GetByUserBuilder().execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_Lecture_FromOQL_V1Builder()
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.ACT_Lecture_FromOQL_V1");
@@ -34,6 +44,26 @@ public final class Microflows
 	public static void aCT_Lecture_FromOQL_V2(IContext context)
 	{
 		aCT_Lecture_FromOQL_V2Builder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder calculateMicroflowExecutionTimeBuilder(
+		java.util.Date _startDate
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.CalculateMicroflowExecutionTime");
+		builder = builder.withParam("StartDate", _startDate);
+		return builder;
+	}
+
+	public static java.math.BigDecimal calculateMicroflowExecutionTime(
+		IContext context,
+		java.util.Date _startDate
+	)
+	{
+		Object result = calculateMicroflowExecutionTimeBuilder(
+				_startDate
+			)
+			.execute(context);
+		return (java.math.BigDecimal) result;
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder cNV_CourseNameBuilder(
 		java.lang.String _courseName
@@ -94,5 +124,39 @@ public final class Microflows
 			)
 			.execute(context);
 		return (java.lang.String) result;
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder getMicroflowStartTimeBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.GetMicroflowStartTime");
+		return builder;
+	}
+
+	public static java.util.Date getMicroflowStartTime(IContext context)
+	{
+		Object result = getMicroflowStartTimeBuilder().execute(context);
+		return (java.util.Date) result;
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder logMicroflowExecutionTimeBuilder(
+		java.util.Date _startDate,
+		java.lang.String _microflowName
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.LogMicroflowExecutionTime");
+		builder = builder.withParam("StartDate", _startDate);
+		builder = builder.withParam("MicroflowName", _microflowName);
+		return builder;
+	}
+
+	public static void logMicroflowExecutionTime(
+		IContext context,
+		java.util.Date _startDate,
+		java.lang.String _microflowName
+	)
+	{
+		logMicroflowExecutionTimeBuilder(
+				_startDate,
+				_microflowName
+			)
+			.execute(context);
 	}
 }
