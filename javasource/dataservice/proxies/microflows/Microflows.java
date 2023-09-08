@@ -59,4 +59,51 @@ public final class Microflows
 			.execute(context);
 		return (java.lang.String) result;
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_LogAtEndBuilder(
+		java.lang.String _routeName,
+		java.util.Date _startDate
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataService.SUB_LogAtEnd");
+		builder = builder.withParam("RouteName", _routeName);
+		builder = builder.withParam("StartDate", _startDate);
+		return builder;
+	}
+
+	public static void sUB_LogAtEnd(
+		IContext context,
+		java.lang.String _routeName,
+		java.util.Date _startDate
+	)
+	{
+		sUB_LogAtEndBuilder(
+				_routeName,
+				_startDate
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_LogAtStartBuilder(
+		java.util.Date _startDate,
+		system.proxies.HttpRequest _httpRequest
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataService.SUB_LogAtStart");
+		builder = builder.withParam("StartDate", _startDate);
+		builder = builder.withParam("httpRequest", _httpRequest);
+		return builder;
+	}
+
+	public static java.lang.String sUB_LogAtStart(
+		IContext context,
+		java.util.Date _startDate,
+		system.proxies.HttpRequest _httpRequest
+	)
+	{
+		Object result = sUB_LogAtStartBuilder(
+				_startDate,
+				_httpRequest
+			)
+			.execute(context);
+		return (java.lang.String) result;
+	}
 }
