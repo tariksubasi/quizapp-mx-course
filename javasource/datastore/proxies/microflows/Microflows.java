@@ -159,4 +159,28 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_GetBuilderTests_ByUserBuilder(
+		java.lang.Long _amount,
+		administration.proxies.Account _account
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataStore.SUB_GetBuilderTests_ByUser");
+		builder = builder.withParam("Amount", _amount);
+		builder = builder.withParam("Account", _account);
+		return builder;
+	}
+
+	public static java.lang.String sUB_GetBuilderTests_ByUser(
+		IContext context,
+		java.lang.Long _amount,
+		administration.proxies.Account _account
+	)
+	{
+		Object result = sUB_GetBuilderTests_ByUserBuilder(
+				_amount,
+				_account
+			)
+			.execute(context);
+		return (java.lang.String) result;
+	}
 }
