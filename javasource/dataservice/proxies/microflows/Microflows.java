@@ -6,7 +6,6 @@ package dataservice.proxies.microflows;
 
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public final class Microflows
 {
@@ -27,7 +26,7 @@ public final class Microflows
 		return builder;
 	}
 
-	public static java.util.List<builder.proxies.Test> pRS_GetTests(
+	public static java.lang.String pRS_GetTests(
 		IContext context,
 		system.proxies.HttpRequest _httpRequest,
 		system.proxies.HttpResponse _httpResponse
@@ -38,6 +37,26 @@ public final class Microflows
 				_httpResponse
 			)
 			.execute(context);
-		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Test.initialize(context, obj));
+		return (java.lang.String) result;
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_GetRouteFromURIBuilder(
+		system.proxies.HttpRequest _httpRequest
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataService.SUB_GetRouteFromURI");
+		builder = builder.withParam("HttpRequest", _httpRequest);
+		return builder;
+	}
+
+	public static java.lang.String sUB_GetRouteFromURI(
+		IContext context,
+		system.proxies.HttpRequest _httpRequest
+	)
+	{
+		Object result = sUB_GetRouteFromURIBuilder(
+				_httpRequest
+			)
+			.execute(context);
+		return (java.lang.String) result;
 	}
 }
