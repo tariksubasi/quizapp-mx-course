@@ -15,6 +15,42 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the DataService module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder pRS_Get_EducationalInfoBuilder(
+		system.proxies.HttpRequest _httpRequest,
+		system.proxies.HttpResponse _httpResponse,
+		java.lang.String _schoolId,
+		java.lang.String _courseId,
+		java.lang.String _lectureId
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataService.PRS_Get_EducationalInfo");
+		builder = builder.withParam("httpRequest", _httpRequest);
+		builder = builder.withParam("httpResponse", _httpResponse);
+		builder = builder.withParam("SchoolId", _schoolId);
+		builder = builder.withParam("CourseId", _courseId);
+		builder = builder.withParam("LectureId", _lectureId);
+		return builder;
+	}
+
+	public static java.lang.String pRS_Get_EducationalInfo(
+		IContext context,
+		system.proxies.HttpRequest _httpRequest,
+		system.proxies.HttpResponse _httpResponse,
+		java.lang.String _schoolId,
+		java.lang.String _courseId,
+		java.lang.String _lectureId
+	)
+	{
+		Object result = pRS_Get_EducationalInfoBuilder(
+				_httpRequest,
+				_httpResponse,
+				_schoolId,
+				_courseId,
+				_lectureId
+			)
+			.execute(context);
+		return (java.lang.String) result;
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder pRS_GetBuilderTests_ByUserBuilder(
 		system.proxies.HttpRequest _httpRequest,
 		system.proxies.HttpResponse _httpResponse,
