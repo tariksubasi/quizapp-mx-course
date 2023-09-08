@@ -11,8 +11,9 @@ import * as style9 from "C:/Users/TKA/Documents/Mendix/QuizApp/themesource/quiza
 import * as style10 from "C:/Users/TKA/Documents/Mendix/QuizApp/themesource/extensions/native/main";
 import * as style11 from "C:/Users/TKA/Documents/Mendix/QuizApp/themesource/anonymous/native/main";
 import * as style12 from "C:/Users/TKA/Documents/Mendix/QuizApp/themesource/datastore/native/main";
-import * as style13 from "C:/Users/TKA/Documents/Mendix/QuizApp/theme/native/main";
+import * as style13 from "C:/Users/TKA/Documents/Mendix/QuizApp/themesource/dataservice/native/main";
+import * as style14 from "C:/Users/TKA/Documents/Mendix/QuizApp/theme/native/main";
 
 import { flatten } from "mendix/native";
 
-module.exports = flatten([style0, style1, style2, style3, style4, style5, style6, style7, style8, style9, style10, style11, style12, style13]);
+module.exports = flatten([style0, style1, style2, style3, style4, style5, style6, style7, style8, style9, style10, style11, style12, style13, style14]);

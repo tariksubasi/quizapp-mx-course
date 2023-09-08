@@ -70,6 +70,21 @@
       "MatchExactly": false
     },
     {
+      "Name": "/api-doc/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/rest/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/rest-doc/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    },
+    {
       "Name": "/p/",
       "DefaultEnabled": true,
       "MatchExactly": false

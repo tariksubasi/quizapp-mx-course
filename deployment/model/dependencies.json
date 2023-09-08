@@ -1,6 +1,27 @@
 {
   "schemaVersion": "2.2",
   "appName": "QuizApp",
-  "published": [],
+  "published": [
+    {
+      "name": "PRS QuizApp",
+      "version": "1.0.0",
+      "path": "rest/prsquizapp/v1",
+      "serviceType": "REST",
+      "contracts": [
+        {
+          "type": "OpenAPI 2.0",
+          "value": "{\"swagger\":\"2.0\",\"info\":{\"title\":\"PRS QuizApp\",\"version\":\"1.0.0\"},\"host\":\"{host}\",\"basePath\":\"/rest/prsquizapp/v1\",\"schemes\":[\"{scheme}\"],\"paths\":{\"/builder/tests\":{\"get\":{\"tags\":[\"builder\"],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"items\":{\"$ref\":\"#/definitions/Test\"},\"xml\":{\"name\":\"Tests\"},\"type\":\"array\"}}}}}},\"definitions\":{\"Test\":{\"title\":\"Test\",\"xml\":{\"name\":\"Test\"},\"type\":\"object\",\"properties\":{\"testName\":{\"type\":\"string\"},\"account\":{\"title\":\"\",\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"}}}}}},\"tags\":[{\"name\":\"builder\",\"description\":\"\"}]}"
+        }
+      ],
+      "security": {
+        "types": [
+          {
+            "type": "None"
+          }
+        ],
+        "allowedRoles": []
+      }
+    }
+  ],
   "consumed": []
 }
