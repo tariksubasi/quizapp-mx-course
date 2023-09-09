@@ -36,15 +36,24 @@ public final class Microflows
 	{
 		aCT_CreateMotorCycleBuilder().execute(context);
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_DownloadPDFBuilder()
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_DownloadPDFBuilder(
+		builder.proxies.Test _test
+	)
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.ACT_DownloadPDF");
+		builder = builder.withParam("Test", _test);
 		return builder;
 	}
 
-	public static void aCT_DownloadPDF(IContext context)
+	public static void aCT_DownloadPDF(
+		IContext context,
+		builder.proxies.Test _test
+	)
 	{
-		aCT_DownloadPDFBuilder().execute(context);
+		aCT_DownloadPDFBuilder(
+				_test
+			)
+			.execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_ShowTaxAmountBuilder()
 	{
