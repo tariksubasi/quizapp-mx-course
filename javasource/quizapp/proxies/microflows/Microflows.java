@@ -6,6 +6,7 @@ package quizapp.proxies.microflows;
 
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public final class Microflows
 {
@@ -34,6 +35,16 @@ public final class Microflows
 	public static void aCT_CreateMotorCycle(IContext context)
 	{
 		aCT_CreateMotorCycleBuilder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_DownloadPDFBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.ACT_DownloadPDF");
+		return builder;
+	}
+
+	public static void aCT_DownloadPDF(IContext context)
+	{
+		aCT_DownloadPDFBuilder().execute(context);
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aCT_ShowTaxAmountBuilder()
 	{
@@ -143,6 +154,85 @@ public final class Microflows
 				_remoteObject
 			)
 			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder doc_ShowBuilder(
+		builder.proxies.Test _test
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.Doc_Show");
+		builder = builder.withParam("Test", _test);
+		return builder;
+	}
+
+	public static void doc_Show(
+		IContext context,
+		builder.proxies.Test _test
+	)
+	{
+		doc_ShowBuilder(
+				_test
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_FirstFourQuestionBuilder(
+		builder.proxies.Test _test
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.DS_FirstFourQuestion");
+		builder = builder.withParam("Test", _test);
+		return builder;
+	}
+
+	public static java.util.List<builder.proxies.Question> dS_FirstFourQuestion(
+		IContext context,
+		builder.proxies.Test _test
+	)
+	{
+		Object result = dS_FirstFourQuestionBuilder(
+				_test
+			)
+			.execute(context);
+		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Question.initialize(context, obj));
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_LastTwoBuilder(
+		builder.proxies.Test _test
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.DS_LastTwo");
+		builder = builder.withParam("Test", _test);
+		return builder;
+	}
+
+	public static java.util.List<builder.proxies.Question> dS_LastTwo(
+		IContext context,
+		builder.proxies.Test _test
+	)
+	{
+		Object result = dS_LastTwoBuilder(
+				_test
+			)
+			.execute(context);
+		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Question.initialize(context, obj));
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dS_SecondFourBuilder(
+		builder.proxies.Test _test
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("QuizApp.DS_SecondFour");
+		builder = builder.withParam("Test", _test);
+		return builder;
+	}
+
+	public static java.util.List<builder.proxies.Question> dS_SecondFour(
+		IContext context,
+		builder.proxies.Test _test
+	)
+	{
+		Object result = dS_SecondFourBuilder(
+				_test
+			)
+			.execute(context);
+		return result == null ? null : com.mendix.utils.ListUtils.map((java.util.List<IMendixObject>) result, obj -> builder.proxies.Question.initialize(context, obj));
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sUB_Check_DE_IsOwnerOfObjectBuilder(
 		quizapp.proxies.RemoteObject _remoteObject

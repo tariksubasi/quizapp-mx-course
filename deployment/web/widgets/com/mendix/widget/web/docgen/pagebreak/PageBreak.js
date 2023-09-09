@@ -1,0 +1,1 @@
+define(["exports","react"],(function(e,t){"use strict";function n(){return t.createElement("div",{className:"document-page-break"})}e.PageBreak=function(){return t.createElement(n,null)},Object.defineProperty(e,"__esModule",{value:!0})}));

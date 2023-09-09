@@ -1,0 +1,101 @@
+{
+    "Page": [
+        {
+            "name": "Enable PDF export",
+            "type": "Toggle",
+            "description": "Enable exporting this page to PDF using the Document Generation module.",
+            "class": "enable-export-pdf document-content"
+        },
+        {
+            "name": "Page orientation",
+            "type": "Dropdown",
+            "description": "The page orientation to use when exporting to PDF.",
+            "options": [
+                {
+                    "name": "Portrait",
+                    "class": "page-orientation-portrait"
+                },
+                {
+                    "name": "Landscape",
+                    "class": "page-orientation-landscape"
+                }
+            ]
+        },
+        {
+            "name": "Page size",
+            "type": "Dropdown",
+            "description": "The page size to use when exporting to PDF.",
+            "options": [
+                {
+                    "name": "Letter",
+                    "class": "page-size-letter"
+                },
+                {
+                    "name": "Legal",
+                    "class": "page-size-legal"
+                },
+                {
+                    "name": "Tabloid",
+                    "class": "page-size-tabloid"
+                },
+                {
+                    "name": "A0",
+                    "class": "page-size-a0"
+                },
+                {
+                    "name": "A1",
+                    "class": "page-size-a1"
+                },
+                {
+                    "name": "A2",
+                    "class": "page-size-a2"
+                },
+                {
+                    "name": "A3",
+                    "class": "page-size-a3"
+                },
+                {
+                    "name": "A4",
+                    "class": "page-size-a4"
+                },
+                {
+                    "name": "A5",
+                    "class": "page-size-a5"
+                },
+                {
+                    "name": "A6",
+                    "class": "page-size-a6"
+                }
+            ]
+        },
+        {
+            "name": "Show page numbers",
+            "type": "Toggle",
+            "description": "Show page numbers when exporting to PDF.",
+            "class": "enable-page-numbers"
+        }
+    ],
+    "DivContainer": [
+        {
+            "name": "Add page break",
+            "type": "Dropdown",
+            "description": "Add a page break before or after this container when exporting to PDF.",
+            "options": [
+                {
+                    "name": "Before",
+                    "class": "page-break-before"
+                },
+                {
+                    "name": "After",
+                    "class": "page-break-after"
+                }
+            ] 
+        },
+        {
+            "name": "Avoid break inside",
+            "type": "Toggle",
+            "description": "Prevent page break inside this container when exporting to PDF.",
+            "class": "avoid-page-break-inside"
+        }
+    ]
+}

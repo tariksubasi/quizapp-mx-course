@@ -1,0 +1,78 @@
+@import '../../../theme/web/custom-variables';
+
+$document-section-padding: 10mm !default;
+$document-background-color: #ffffff !default;
+
+.docgen-registration-wizard h1.fieldset-header {
+    font-size: 21px;
+    font-weight: normal;
+    line-height: inherit;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+}
+
+/*
+ * This class gets injected to the body element by the Document Generation service, and can be used
+ * to remove unwanted widgets/elements in the DOM that are not inside the .document-content container. 
+ *
+ * Please note that any styles applied here will not reflect in design mode.
+*/
+.document-generation-body-injected {
+    background-color: $document-background-color;
+    -webkit-print-color-adjust: exact;
+    
+    .mx-demouserswitcher, 
+    .sprintrFeedback, 
+    .mx-feedback__startBtn,
+    .mxfeedback-button {
+        display: none;
+    }
+}
+
+@media screen, print {
+    .mx-page.document-content {
+        background-color: $document-background-color;
+
+        .document-section {
+            padding: $document-section-padding;
+
+            &.remove-padding { 
+                padding: 0;
+            }
+
+            &.remove-padding-top {
+                padding-top: 0;
+            }
+
+            &.remove-padding-bottom {
+                padding-bottom: 0;
+            }
+
+            &.remove-padding-left {
+                padding-left: 0;
+            }
+
+            &.remove-padding-right {
+                padding-right: 0;
+            }
+        }
+
+        // Required for support of repeated table header/footers when using screen media type
+        table > thead, 
+        table > tfoot {
+            break-inside: avoid;
+        }
+    }
+
+    .page-break-before { 
+        break-before: page;
+    }
+
+    .page-break-after {
+        break-after: page;
+    }
+
+    .avoid-page-break-inside {
+        break-inside: avoid;
+    }
+}

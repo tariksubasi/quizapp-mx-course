@@ -2952,6 +2952,70 @@
   content: "\ea6d";
 }
 
+.docgen-registration-wizard h1.fieldset-header {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: inherit;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+
+/*
+ * This class gets injected to the body element by the Document Generation service, and can be used
+ * to remove unwanted widgets/elements in the DOM that are not inside the .document-content container. 
+ *
+ * Please note that any styles applied here will not reflect in design mode.
+*/
+.document-generation-body-injected {
+  background-color: #ffffff;
+  -webkit-print-color-adjust: exact;
+}
+.document-generation-body-injected .mx-demouserswitcher,
+.document-generation-body-injected .sprintrFeedback,
+.document-generation-body-injected .mx-feedback__startBtn,
+.document-generation-body-injected .mxfeedback-button {
+  display: none;
+}
+
+@media screen, print {
+  .mx-page.document-content {
+    background-color: #ffffff;
+  }
+  .mx-page.document-content .document-section {
+    padding: 10mm;
+  }
+  .mx-page.document-content .document-section.remove-padding {
+    padding: 0;
+  }
+  .mx-page.document-content .document-section.remove-padding-top {
+    padding-top: 0;
+  }
+  .mx-page.document-content .document-section.remove-padding-bottom {
+    padding-bottom: 0;
+  }
+  .mx-page.document-content .document-section.remove-padding-left {
+    padding-left: 0;
+  }
+  .mx-page.document-content .document-section.remove-padding-right {
+    padding-right: 0;
+  }
+  .mx-page.document-content table > thead,
+.mx-page.document-content table > tfoot {
+    break-inside: avoid;
+  }
+
+  .page-break-before {
+    break-before: page;
+  }
+
+  .page-break-after {
+    break-after: page;
+  }
+
+  .avoid-page-break-inside {
+    break-inside: avoid;
+  }
+}
 /*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.

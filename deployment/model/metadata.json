@@ -43,13 +43,82 @@
       "DefaultValue": "10"
     },
     {
+      "Name": "DocumentGeneration.API_URL",
+      "Type": "String",
+      "Description": "URL of the DocGen Cloud Service API\r\n\r\nDefault: https://docgen.home.mendix.com/v1/generate-document",
+      "DefaultValue": "https://docgen.home.mendix.com/v1/generate-document"
+    },
+    {
+      "Name": "DocumentGeneration.AsyncTimeoutInSeconds",
+      "Type": "Integer",
+      "Description": "Timeout in seconds for an asynchronous request; determines how long a document is allowed to be queued by the Cloud service",
+      "DefaultValue": "300"
+    },
+    {
+      "Name": "DocumentGeneration.CustomChromePath",
+      "Type": "String",
+      "Description": "Path to Chrome or Chromium executable, for example: C:/Program Files/Google/Chrome/Application/Chrome.exe",
+      "DefaultValue": ""
+    },
+    {
+      "Name": "DocumentGeneration.EmulateCloudEnvironment",
+      "Type": "Boolean",
+      "Description": "",
+      "DefaultValue": "False"
+    },
+    {
+      "Name": "DocumentGeneration.MaxHoursBeforeTokenRefresh",
+      "Type": "Integer",
+      "Description": "The number of hours to determine if the access token that is used to secure the Document Generation Cloud service should be refreshed.",
+      "DefaultValue": "24"
+    },
+    {
+      "Name": "DocumentGeneration.RequestCleanupOffsetInDays",
+      "Type": "Integer",
+      "Description": "The offset in days after which expired DocumentRequest objects are deleted if the 'SE_DocumentRequest_Cleanup' scheduled event has been enabled.\r\n\r\nDefault: 7 days.",
+      "DefaultValue": "7"
+    },
+    {
+      "Name": "DocumentGeneration.SyncTimeoutInSeconds",
+      "Type": "Integer",
+      "Description": "Timeout in seconds for a synchronous request to wait for the result",
+      "DefaultValue": "30"
+    },
+    {
+      "Name": "DocumentGeneration.TOKEN_URL",
+      "Type": "String",
+      "Description": "URL of the DocGen App Registration API\r\n\r\nDefault: https://docgen.home.mendix.com/auth/v1/token",
+      "DefaultValue": "https://docgen.home.mendix.com/auth/v1/token"
+    },
+    {
+      "Name": "DocumentGeneration.TokenLifetimeInSeconds",
+      "Type": "Integer",
+      "Description": "Security token lifetime in seconds. The security token is used to secure and validate document requests from the local and/or cloud service.\r\n\r\nDefault value: 1800 (30 minutes)",
+      "DefaultValue": "1800"
+    },
+    {
+      "Name": "DocumentGeneration.Version",
+      "Type": "String",
+      "Description": "This is the version of the Document Generation module.",
+      "DefaultValue": "1.1.1"
+    },
+    {
       "Name": "NanoflowCommons.Nanoflow_Commons_Version",
       "Type": "String",
       "Description": "",
       "DefaultValue": "4.0.0"
     }
   ],
-  "ScheduledEvents": [],
+  "ScheduledEvents": [
+    {
+      "Name": "DocumentGeneration.SE_AccessToken_Refresh",
+      "Description": "This scheduled event refreshes the access token that is used to secure access to the Document Generation Cloud service. If your app is running in the Mendix cloud, this scheduled event needs to be enabled."
+    },
+    {
+      "Name": "DocumentGeneration.SE_DocumentRequest_Cleanup",
+      "Description": "This scheduled event removes expired DocumentRequest objects after a configured offset in days (using constant @DocumentGeneration.RequestCleanupOffsetInDays, the default value is 7 days)."
+    }
+  ],
   "Languages": [
     "en_US"
   ],

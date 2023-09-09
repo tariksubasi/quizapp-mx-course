@@ -1,0 +1,12 @@
+{
+  "tabWidth": 4,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": ["*.json", "*.prettierrc"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}
