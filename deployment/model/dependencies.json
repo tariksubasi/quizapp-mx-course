@@ -10,16 +10,32 @@
       "contracts": [
         {
           "type": "OpenAPI 2.0",
-          "value": "{\"swagger\":\"2.0\",\"info\":{\"title\":\"PRS QuizApp\",\"version\":\"1.0.0\"},\"host\":\"{host}\",\"basePath\":\"/rest/prsquizapp/v1\",\"schemes\":[\"{scheme}\"],\"paths\":{\"/builder/tests\":{\"get\":{\"tags\":[\"builder\"],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"type\":\"string\"}}}}},\"/builder/user-tests\":{\"get\":{\"tags\":[\"builder\"],\"parameters\":[{\"name\":\"userId\",\"in\":\"query\",\"type\":\"string\"},{\"name\":\"amount\",\"in\":\"query\",\"type\":\"integer\"}],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"type\":\"string\"}}}}},\"/builder/school/{schoolId}/course/{courseId}/lecture/{lectureId}\":{\"get\":{\"tags\":[\"builder\"],\"parameters\":[{\"name\":\"schoolId\",\"in\":\"path\",\"required\":true,\"type\":\"string\"},{\"name\":\"courseId\",\"in\":\"path\",\"required\":true,\"type\":\"string\"},{\"name\":\"lectureId\",\"in\":\"path\",\"required\":true,\"type\":\"string\"}],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"type\":\"string\"}}}}},\"/builder/test\":{\"post\":{\"tags\":[\"builder\"],\"parameters\":[{\"name\":\"tests\",\"in\":\"body\",\"schema\":{\"type\":\"object\"}}],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"type\":\"string\"}}}}}},\"tags\":[{\"name\":\"builder\",\"description\":\"\"}]}"
+          "value": "{\"swagger\":\"2.0\",\"info\":{\"title\":\"PRS QuizApp\",\"version\":\"1.0.0\"},\"host\":\"{host}\",\"basePath\":\"/rest/prsquizapp/v1\",\"schemes\":[\"{scheme}\"],\"paths\":{\"/builder/tests\":{\"get\":{\"tags\":[\"builder\"],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"type\":\"string\"}},\"401\":{\"$ref\":\"#/responses/UnauthorizedError\"}}}},\"/builder/user-tests\":{\"get\":{\"tags\":[\"builder\"],\"parameters\":[{\"name\":\"userId\",\"in\":\"query\",\"type\":\"string\"},{\"name\":\"amount\",\"in\":\"query\",\"type\":\"integer\"}],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"type\":\"string\"}},\"401\":{\"$ref\":\"#/responses/UnauthorizedError\"}}}},\"/builder/school/{schoolId}/course/{courseId}/lecture/{lectureId}\":{\"get\":{\"tags\":[\"builder\"],\"parameters\":[{\"name\":\"schoolId\",\"in\":\"path\",\"required\":true,\"type\":\"string\"},{\"name\":\"courseId\",\"in\":\"path\",\"required\":true,\"type\":\"string\"},{\"name\":\"lectureId\",\"in\":\"path\",\"required\":true,\"type\":\"string\"}],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"type\":\"string\"}},\"401\":{\"$ref\":\"#/responses/UnauthorizedError\"}}}},\"/builder/test\":{\"post\":{\"tags\":[\"builder\"],\"parameters\":[{\"name\":\"tests\",\"in\":\"body\",\"schema\":{\"type\":\"object\"}}],\"responses\":{\"200\":{\"description\":\"successful operation\",\"schema\":{\"type\":\"string\"}},\"401\":{\"$ref\":\"#/responses/UnauthorizedError\"}}}}},\"responses\":{\"UnauthorizedError\":{\"description\":\"Authentication information is missing or invalid\",\"headers\":{\"WWW-Authenticate\":{\"type\":\"string\"}}}},\"securityDefinitions\":{\"basicAuth\":{\"type\":\"basic\"}},\"security\":[{\"basicAuth\":[]}],\"tags\":[{\"name\":\"builder\",\"description\":\"\"}]}"
         }
       ],
       "security": {
         "types": [
           {
+            "type": "Basic"
+          },
+          {
             "type": "None"
           }
         ],
-        "allowedRoles": []
+        "allowedRoles": [
+          {
+            "id": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+            "name": "Administrator"
+          },
+          {
+            "id": "53f5d6fa-6da9-4a71-b011-454ec052cce8",
+            "name": "User"
+          },
+          {
+            "id": "bc1fcfc8-9821-4f84-9826-e72d04f0dd23",
+            "name": "DataEmployee"
+          }
+        ]
       }
     }
   ],
