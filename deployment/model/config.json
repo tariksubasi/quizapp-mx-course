@@ -12,16 +12,16 @@
   "Constants": {
     "Anonymous.Regex_Mail": "\\w+((-|\\+|\\.)\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,})+",
     "CommunityCommons.MergeMultiplePdfs_MaxAtOnce": "10",
-    "DocumentGeneration.Version": "1.1.1",
     "DocumentGeneration.EmulateCloudEnvironment": "False",
+    "DocumentGeneration.Version": "1.1.1",
     "DocumentGeneration.CustomChromePath": "",
     "DocumentGeneration.RequestCleanupOffsetInDays": "7",
     "DocumentGeneration.API_URL": "https://docgen.home.mendix.com/v1/generate-document",
     "DocumentGeneration.TOKEN_URL": "https://docgen.home.mendix.com/auth/v1/token",
-    "DocumentGeneration.TokenLifetimeInSeconds": "1800",
-    "DocumentGeneration.MaxHoursBeforeTokenRefresh": "24",
     "DocumentGeneration.AsyncTimeoutInSeconds": "300",
     "DocumentGeneration.SyncTimeoutInSeconds": "30",
+    "DocumentGeneration.MaxHoursBeforeTokenRefresh": "24",
+    "DocumentGeneration.TokenLifetimeInSeconds": "1800",
     "NanoflowCommons.Nanoflow_Commons_Version": "4.0.0"
   },
   "AdminPassword": "1"
