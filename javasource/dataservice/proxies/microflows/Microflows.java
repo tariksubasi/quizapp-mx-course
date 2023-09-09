@@ -6,6 +6,7 @@ package dataservice.proxies.microflows;
 
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public final class Microflows
 {
@@ -15,6 +16,26 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the DataService module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder mID_ValidateUserBuilder(
+		system.proxies.HttpRequest _httpRequest
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("DataService.MID_ValidateUser");
+		builder = builder.withParam("HttpRequest", _httpRequest);
+		return builder;
+	}
+
+	public static system.proxies.User mID_ValidateUser(
+		IContext context,
+		system.proxies.HttpRequest _httpRequest
+	)
+	{
+		Object result = mID_ValidateUserBuilder(
+				_httpRequest
+			)
+			.execute(context);
+		return result == null ? null : system.proxies.User.initialize(context, (IMendixObject) result);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder pRS_CreateTestsBuilder(
 		system.proxies.HttpRequest _httpRequest,
 		system.proxies.HttpResponse _httpResponse,
